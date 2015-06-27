@@ -1,0 +1,9 @@
+header, main, footer {
+  width: 100%
+}
+/*borders and padding to view major blocks until formatted*/
+section, ol, header, footer, main, menu {
+  border: 1px solid black;
+  margin: .5em 0;
+  padding: .5em;
+}

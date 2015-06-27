@@ -1,0 +1,8 @@
+/*media queries*/
+  /*base styles for mobile*/
+@media (max-width: 31.25em)  {
+  section {
+    width: 90%;
+    margin: auto, 1em;
+  }
+}
