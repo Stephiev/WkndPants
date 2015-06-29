@@ -5,4 +5,51 @@
     width: 90%;
     margin: auto, 1em;
   }
+  .wknd_logo {
+    width: 3em;
+  }
+  .pant_description_sidebar {
+    width: 15em;
+    padding: .5em;
+    float: none;
+  }
+  .pants_catalog {
+    float: left;
+  }
+  .pant_form {
+    width: 9em;
+  }
+  .pant_img {
+    width: 8em;
+  }
 }
+@media (min-width: 37.51em) {
+  .pant_description_sidebar {
+    height: 40em;
+    width: 10em;
+    float: left;
+  }
+  .flex_container {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-flow: row wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: center;
+            justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  .pant {
+    width: 20em;
+    height: 18em;
+    margin: .5em;
+  }
+  .pant_img {
+    width: 10em;
+    float: left;
+  }
+}
+

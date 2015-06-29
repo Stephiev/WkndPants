@@ -2,11 +2,11 @@ header, main, footer {
   width: 100%
 }
 /*borders and padding to view major blocks until formatted*/
-section, ol, header, footer, main, menu {
+/*section, ol, header, footer, main, menu {
   border: 1px solid black;
   margin: .5em 0;
   padding: .5em;
-}
+}*/
 h1 {
   text-align: center;
 }
@@ -19,26 +19,36 @@ nav li {
 footer {
   clear: both;
 }
-.flex_container {
-  position: relative;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-          flex-direction: row;
-  -webkit-flex-flow: row wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: center;
-          justify-content: center;
-  align-content: flex-start;
-  align-items: flex-start;
+.pants_content {
+  text-align: center;
+  max-width: 56em;
+  margin: 0 auto;
+}
+.pants_catalog {
+  max-width: 44em;
+  min-height: 40em;
 }
 .pant_description_sidebar {
-  height: 50em;
+  height: 40em;
   width: 10em;
   float: left;
+  margin-right: 1em;
+  text-align: left;
+  background-color: black;
+  color: white;
 }
-.pant {
-  width: 20em;
-  height: 20em;
-  margin: .5em;
+.product_detail_list {
+  line-height: 1.75em;
+  font-size: .75em;
+}
+.sidebar_img {
+  width: 9em;
+  margin: 5em 0 0 0;
+}
+.pant_style_name {
+  font-size: 1.25em;
+  margin: 2em 0 .5em 0;
+}
+.size_select, .quantity, .add_to_cart {
+  margin-top: .5em;
 }

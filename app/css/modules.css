@@ -1,1 +1,20 @@
 /* header */
+.wknd_logo {
+  width: 5em;
+  float: right;
+}
+.nav_links {
+  margin: 0 .5em 0 .5em;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  line-height: 2em;
+}
+.icon-twitter {
+  font-size: 2em;
+}
+.footer_text {
+  font-size: .6em;
+}
