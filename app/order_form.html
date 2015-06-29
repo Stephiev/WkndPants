@@ -3,7 +3,8 @@
           <legend>Shipping & Contact</legend>
               <ul>
                 <h5>Your Email Address</h5>
-                <li><label for="email">Email: </label><input type="email" name="email" placeholder="Email" id="email" class="stored" required></li>
+                <li><label for="shipping_email">Email: </label>
+                <input id="shipping_email" name="shipping_email" placeholder="Email" type="email" class="stored" required></li>
                 <h5>Shipping Address</h5>
                 <li><label for="shipping_firstname">First Name</label>
                 <input id="shipping_firstname" name="shipping_firstname" placeholder="First Name" type="text" class="stored" required></li>
@@ -18,7 +19,7 @@
                 <li><label for="shipping_state">State: </label>
                 <input id="shipping_state" name="shipping_state" placeholder="State" type="text" class="stored" required></li>
                 <li><label for="shipping_zip">Zip Code: </label>
-                <input id="shipping_zip" name="shipping_zip" placeholder="Zip/Postal"type="number" class="stored" required></li>
+                <input id="shipping_zip" name="shipping_zip" placeholder="Zip/Postal"type="text" class="stored" required></li>
                 <li><label for="phone">Phone: </label><input type="tel" name="phone" placeholder="Phone Number" id="phone" class="stored"></li>
               </ul>
           </fieldset>
@@ -48,18 +49,18 @@
                 <li><label for="billing_state">State: </label>
                 <input id="billing_state" name="billing_state" placeholder="State" type="text" class="stored" required></li>
                 <li><label for="billing_zip">Zip Code: </label>
-                <input id="billing_zip" name="billing_zip" placeholder="Zip/Postal"type="number" class="stored" required></li>
+                <input id="billing_zip" name="billing_zip" placeholder="Zip/Postal"type="text" class="stored" required></li>
               </ul>
               <ul>
                 <h5>Card Information</h5>
                 <li><label for="cardnumber">Card number: </label>
-                <input id="cardnumber" name="cardnumber" placeholder="4242424242424242" type="number" required></li>
+                <input id="cardnumber" name="cardnumber" placeholder="4242424242424242" type="text" required></li>
                 <li><label for="card_month_expiration">Expiration Month: </label>
-                <input id="card_month_expiration" name="card_month_expiration" placeholder="XX" type="number" required></li>
+                <input id="card_month_expiration" name="card_month_expiration" placeholder="XX" type="text" required></li>
                 <li><label for="card_year_expiration">Expiration Year: </label>
-                <input id="card_year_expiration" name="card_year_expiration" placeholder="XXXX" type="number" required></li>
+                <input id="card_year_expiration" name="card_year_expiration" placeholder="XXXX" type="text" required></li>
                 <li><label for="secure">Security code: </label>
-                <input id="secure" name="secure" placeholder="XXX" type="number" required></li>
+                <input id="secure" name="secure" placeholder="XXX" type="text" required></li>
               </ul>
               <input type="submit" name="mysubmit" value="Submit Order" />
             </fieldset>
