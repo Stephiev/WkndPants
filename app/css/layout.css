@@ -7,3 +7,38 @@ section, ol, header, footer, main, menu {
   margin: .5em 0;
   padding: .5em;
 }
+h1 {
+  text-align: center;
+}
+nav {
+  text-align: center;
+}
+nav li {
+  display: inline-block;
+}
+footer {
+  clear: both;
+}
+.flex_container {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-flow: row wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+          justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.pant_description_sidebar {
+  height: 50em;
+  width: 10em;
+  float: left;
+}
+.pant {
+  width: 20em;
+  height: 20em;
+  margin: .5em;
+}

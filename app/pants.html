@@ -41,44 +41,71 @@
       </nav>
     </header>
     <main>
-      <menu>
-        <h2>Sort by:</h2>
-        <h3>Type/Style</h3>
-        <ol class="type">
-          <li>
-            <input type="checkbox" id="" name="" value="">Type1
-          </li>
-          <li>
-            <input type="checkbox" id="" name="" value="">Type2
-          </li>
-          <li>
-            <input type="checkbox" id="" name="" value="">Type3
-          </li>
-        </ol>
-        <h3>Color</h3>
-        <ol class="color">
-          <li>
-            <input type="checkbox" id="" name="" value="">Color1
-          </li>
-          <li>
-            <input type="checkbox" id="" name="" value="">Color2
-          </li>
-          <li>
-            <input type="checkbox" id="" name="" value="">Color3
-          </li>
-        </ol>
-        <h3>Size</h3>
-        <select id="shirt_size">
-          <option value="size_S">Small</option>
-          <option value="size_M">Medium</option>
-          <option value="size_L">Large</option>
-          <option value="size_XL">XL</option>
-          <option value="size_XXL">XXL</option>
-          <option value="size_XXXL">XXXL</option>
-        </select>
-      </menu>
-      <section id="" class="">Pants go here</section>
-      <section>tagline?</section>
+      <h1>The Weekend is Calling</h1>
+      <section class="pant_description_sidebar">
+        <h3>Product Details</h3>
+        <ul>
+          <li>100% Polyster </li>
+          <li>Full-Elastic Band</li>
+          <li>Machine Washable</li>
+          <li>3 Pocket Design: 2 Side Pockets, 1 Rear Wallet Pocket</li>
+          <li>Tapered Ankle</li>
+        </ul>
+      </section>
+      <section class="flex_container pants_catalog">
+        <section class="pant style_aztec_mint">
+          <img src="" alt="">
+          <h2>Aztec Mint</h2>
+          <h3>$32</h3>
+          <h3>Size</h3>
+          <select id="aztec_mint_size">
+            <option value="size_S">Small</option>
+            <option value="size_M">Medium</option>
+            <option value="size_L">Large</option>
+          </select>
+          <input type="number" id="aztec_mint_qty" class="quantity" min="1" max="5" value="1" name="quantity">
+          <button class="add_to_cart" id="aztec_mint_cart">Add to Cart</button>
+        </section>
+        <section class="pant style_the_basics">
+          <img src="" alt="">
+          <h2>The Basics</h2>
+          <h3>$32</h3>
+          <h3>Size</h3>
+          <select id="the_basics_size">
+            <option value="size_S">Small</option>
+            <option value="size_M">Medium</option>
+            <option value="size_L">Large</option>
+          </select>
+          <input type="number" id="the_basics_qty" class="quantity" min="1" max="5" value="1" name="quantity">
+          <button class="add_to_cart" id="the_basics_cart">Add to Cart</button>
+        </section>
+        <section class="pant style_purple_mountain">
+          <img src="" alt="">
+          <h2>Purple Mountain</h2>
+          <h3>$32</h3>
+          <h3>Size</h3>
+          <select id="purple_mountain_size">
+            <option value="size_S">Small</option>
+            <option value="size_M">Medium</option>
+            <option value="size_L">Large</option>
+          </select>
+          <input type="number" id="purple_mountain_qty" class="quantity" min="1" max="5" value="1" name="quantity">
+          <button class="add_to_cart" id="purple_mountain_cart">Add to Cart</button>
+        </section>
+        <section class="pant style_XXX">
+          <img src="" alt="">
+          <h2>XXX</h2>
+          <h3>$32</h3>
+          <h3>Size</h3>
+          <select id="XXX_size">
+            <option value="size_S">Small</option>
+            <option value="size_M">Medium</option>
+            <option value="size_L">Large</option>
+          </select>
+          <input type="number" id="XXX_qty" class="quantity" min="1" max="5" value="1" name="quantity">
+          <button class="add_to_cart" id="XXX_cart">Add to Cart</button>
+        </section>
+      </section>
     </main>
     <footer>
       <p>Copyright &copy 2014 Weekend Pants Unlimited. All Rights Reserved.</p>
