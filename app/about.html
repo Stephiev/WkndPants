@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="EN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>WKND Pants | About</title>
+    <meta property="og:site_name" content="Weekend Pants Unlimited"/>
+    <meta property="og:description" content="The Weekend is Calling"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/modules.css">
+    <link rel="stylesheet" href="css/states.css">
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header>
+      <img class="wknd_logo" src="" />
+      <h1 class="logo_text">Weekend Pants Unlimited</h1>
+      <input type="checkbox">
+      <nav>
+        <ol>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="pants.html">Pants</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="">Cart</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <main>
+      <section>bio</section>
+      <section>
+        <form class="contact" role="form">
+          <fieldset class="contact_fieldset">
+            <ul>
+              <li class="contact_li">
+                <label for="contact_name">First Name:</label>
+                <input id="first_name" role="textbox" aria-required="true" type="text" placeholder="First" title="First Name" autofocus/>
+              </li>
+              <li class="contact_li">
+                <label for="last_name">Last Name:</label>
+                <input id="last_name" role="textbox" aria-required="true" type="text" placeholder="Last" title="Last Name" />
+              </li>
+              <li class="contact_li">
+                <label for="contact_email">Email Address:</label>
+                <input id="contact_email" role="textbox" aria-required="true" type="email" name="email" title="email address" placeholder="Email"/>
+              </li>
+              <li id="contact_li">
+                <label for="contact_subject">Subject:</label>
+                <textarea id="contact_subject" role="textbox" rows=1 cols=110 aria-required="true" type="textbox" name="message" placeholder="Subject"></textarea>
+              </li>
+              <li id="contact_li">
+                <label for="contact_message">Message:</label>
+                <textarea id="contact_message" role="textbox" rows=5 cols=110 aria-required="true" type="textbox" name="message" placeholder="Message"></textarea>
+              </li>
+            <button class="contact_button"id="send_message" title="enter your message here" role="button">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright &copy 2014 Weekend Pants Unlimited. All Rights Reserved.</p>
+      <h3><strong>Seattle </strong> ♥ <strong> Detroit</strong></h3>
+      <div>Social Link Icons?</div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
