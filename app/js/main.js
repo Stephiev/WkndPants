@@ -1,6 +1,3 @@
-
-// placeholder
-
 //retrieves localStorage data for form fields
 $(document).ready(function () {
   function init() {
@@ -15,6 +12,6 @@ $(document).ready(function () {
   init();
 });
 //stores form data on keyup with class of "stored"
-$('.stored').keyup(function () {
+$('.stored').change(function () {
   localStorage[$(this).attr('name')] = $(this).val();
 });
