@@ -1,0 +1,47 @@
+@font-face {
+     font-family: 'Montserrat';
+     src: url('fonts/montserrat/Montserrat-UltraLight.otf') format('truetype');
+     font-weight: normal;
+     font-style: UltraLight;
+}
+  @font-face {
+     font-family: 'Montserrat';
+     src: url('fonts/montserrat/Montserrat-Light.otf') format('truetype');
+     font-weight: normal;
+     font-style: Light;
+}
+  .order_form {
+    font-style: UltraLight;
+  }
+    input {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-style: UltraLight;
+  font-size: 1.2em;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  margin-bottom: .5em;
+  margin-top: .2em;
+}
+  input[placeholder] {
+    font-style: UltraLight;
+    font-size: 1em;
+  }
+.fieldset_orderpage {
+  border: none;
+}
+.description_orderpage {
+  font-size: 1.2em;
+}
+form {
+  margin: 0 0 2em 0;
+  background-color: white;
+}
+.legend_cart-form {
+  margin: 0 0 1.2em 0;
+  padding-top: 1.5em;
+  font-size: 1.4em;
+  border-bottom: 1px solid black;
+}
