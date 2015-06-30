@@ -1,33 +1,74 @@
 /*media queries*/
   /*base styles for mobile*/
-@media (max-width: 31.25em)  {
+@media (max-width: 37.5em)  {
   section {
-    width: 90%;
+    width: 95%;
     margin: auto, 1em;
   }
-  .wknd_logo {
-    width: 3em;
+  .wknd_logo, .sidebar_img {
+    display: none;
+  }
+
+  .nav_links {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    padding: .5em 0;
+    border-top: 1px solid black;
+    font-size: 1.25em;
+  }
+  .nav_links:last-of-type {
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
   }
   .pant_description_sidebar {
-    width: 15em;
+    width: 90%;
     padding: .5em;
-    float: none;
+    margin: .5em auto;
   }
-  .pants_catalog {
+  .pant {
+    padding: .5em 0 .5em 0;
+    margin: .5em auto;
+    border-top: 1px solid black;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  .pant:last-of-type {
+    border-bottom: 1px solid black;
+  }
+  .pant_text {
     float: left;
-  }
-  .pant_form {
-    width: 9em;
+    width: 8em;
+    margin-left: .25em;
   }
   .pant_img {
-    width: 8em;
+    width: 20em;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 8em;
+  }
+  .pant_style_name {
+    font-size: 1.25em;
+    margin: 1em 0 .5em 0;
   }
 }
 @media (min-width: 37.51em) {
+  header {
+    height: 5em;
+  }
+  .nav_links {
+    margin: 0 .5em 0 .5em;
+  }
   .pant_description_sidebar {
     height: 40em;
     width: 10em;
     float: left;
+    background-color: black;
+    color: white;
   }
   .flex_container {
     position: relative;
@@ -47,6 +88,15 @@
     height: 18em;
     margin: .5em;
   }
+  .pant_description_sidebar {
+    height: 40em;
+    width: 10em;
+    float: left;
+    margin-right: 1em;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
   .pant_img {
     width: 10em;
     float: left;

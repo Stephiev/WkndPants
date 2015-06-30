@@ -7,6 +7,13 @@ header, main, footer {
   margin: .5em 0;
   padding: .5em;
 }*/
+header {
+  margin-bottom: 1em;
+  background-color: #ededed;
+}
+.logo_text {
+  padding-top: .5em;
+}
 h1 {
   text-align: center;
 }
@@ -28,14 +35,15 @@ footer {
   max-width: 44em;
   min-height: 40em;
 }
+.pant {
+  text-align: center;
+}
+.pant_img {
+  max-width: 10em;
+}
 .pant_description_sidebar {
-  height: 40em;
-  width: 10em;
-  float: left;
-  margin-right: 1em;
+  padding: .5em;
   text-align: left;
-  background-color: black;
-  color: white;
 }
 .product_detail_list {
   line-height: 1.75em;
@@ -47,7 +55,6 @@ footer {
 }
 .pant_style_name {
   font-size: 1.25em;
-  margin: 2em 0 .5em 0;
 }
 .size_select, .quantity, .add_to_cart {
   margin-top: .5em;

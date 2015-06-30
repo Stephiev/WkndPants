@@ -3,9 +3,8 @@
   width: 5em;
   float: right;
 }
-.nav_links {
-  margin: 0 .5em 0 .5em;
-}
+
+
 /*splash images*/
 @-webkit-keyframes slider {
     0% { left: 0%; }
@@ -68,11 +67,34 @@
 /* footer */
 footer {
   text-align: center;
-  line-height: 2em;
+  border-top: 1px solid gray;
 }
 .icon-twitter {
   font-size: 2em;
 }
+.footer_social_icons {
+  margin: 1em 0 .5em 0;
+}
 .footer_text {
   font-size: .6em;
+  margin: 1em 0 2em 0;
+}
+/*clear fix*/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+.box-set {
+  background: #e8eae9;
+  float: left;
+  width: 100%;
+  overflow: auto;
 }
