@@ -9,81 +9,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/modules.css">
     <link rel="stylesheet" href="css/states.css">
-
   </head>
   <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <header>
-      <img class="wknd_logo" src="" />
+      <img class="wknd_logo" src="images/wkndpantslogo.png" />
       <h1 class="logo_text">Weekend Pants Unlimited</h1>
-      <input type="checkbox">
       <nav>
         <ol>
-          <li>
+          <li class="nav_links">
             <a href="index.html">Home</a>
           </li>
-          <li>
+          <li class="nav_links">
             <a href="pants.html">Pants</a>
           </li>
-          <li>
+          <li class="nav_links">
             <a href="about.html">About</a>
           </li>
-          <li>
+          <li class="nav_links">
             <a href="">Cart</a>
           </li>
         </ol>
       </nav>
     </header>
     <main>
-      <menu>
-        <h2>Sort by:</h2>
-        <h3>Type/Style</h3>
-        <ol class="type">
-          <li>
-            <input type="checkbox" id="" name="" value="">Type1
-          </li>
-          <li>
-            <input type="checkbox" id="" name="" value="">Type2
-          </li>
-          <li>
-            <input type="checkbox" id="" name="" value="">Type3
-          </li>
-        </ol>
-        <h3>Color</h3>
-        <ol class="color">
-          <li>
-            <input type="checkbox" id="" name="" value="">Color1
-          </li>
-          <li>
-            <input type="checkbox" id="" name="" value="">Color2
-          </li>
-          <li>
-            <input type="checkbox" id="" name="" value="">Color3
-          </li>
-        </ol>
-        <h3>Size</h3>
-        <select id="shirt_size">
-          <option value="size_S">Small</option>
-          <option value="size_M">Medium</option>
-          <option value="size_L">Large</option>
-          <option value="size_XL">XL</option>
-          <option value="size_XXL">XXL</option>
-          <option value="size_XXXL">XXXL</option>
-        </select>
-      </menu>
-      <section id="" class="">Pants go here</section>
-      <section>tagline?</section>
+      <section class="pants_content">
+        <h2 class="tagline">The Weekend is Calling</h2>
+        <section class="flex_container pants_catalog">
+          <section class="pant style_aztec_mint">
+            <img class="pant_img" src="images/aztec_mint.jpg">
+            <div class="pant_text">
+              <h2 class="pant_style_name">Aztec Mint</h2>
+              <h3>$32</h3>
+              <form class="pant_form">
+                <label class="size_label" for="aztec_mint_size">Size</label>
+                <select class="size_select" id="aztec_mint_size">
+                  <option value="size_S">Small</option>
+                  <option value="size_M">Medium</option>
+                  <option value="size_L">Large</option>
+                </select>
+                <label class="qty_label" for="aztec_mint_qty">Qty</label>
+                <select type="number" id="aztec_mint_qty" class="quantity"  name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <button class="add_to_cart" id="aztec_mint_cart">Add to Cart</button>
+              </form>
+            </div>
+          </section>
+          <section class="pant style_the_basics">
+            <img class="pant_img" src="images/the_basics.jpg">
+            <div class="pant_text">
+              <h2 class="pant_style_name">The Basics</h2>
+              <h3>$32</h3>
+              <form class="pant_form">
+                <label class="size_label" for="the_basics_size">Size</label>
+                <select class="size_select" id="the_basics_size">
+                  <option value="size_S">Small</option>
+                  <option value="size_M">Medium</option>
+                  <option value="size_L">Large</option>
+                </select>
+                <label class="qty_label" for="the_basics_qty">Qty</label>
+                <select type="number" id="aztec_mint_qty" class="quantity"  name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <button class="add_to_cart" id="the_basics_cart">Add to Cart</button>
+              </form>
+            </div>
+          </section>
+          <section class="pant style_purple_mountain">
+            <img class="pant_img" src="images/purple_mountain.jpg">
+            <div class="pant_text">
+              <h2 class="pant_style_name">Purple Mountain</h2>
+              <h3>$32</h3>
+              <form class="pant_form">
+                <label class="size_label" for="purple_mountain_size">Size</label>
+                <select class="size_select" id="purple_mountain_size">
+                  <option value="size_S">Small</option>
+                  <option value="size_M">Medium</option>
+                  <option value="size_L">Large</option>
+                </select>
+                <label class="qty_label" for="purple_mountain_qty">Qty</label>
+                <select type="number" id="aztec_mint_qty" class="quantity"  name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <button class="add_to_cart" id="purple_mountain_cart">Add to Cart</button>
+              </form>
+            </div>
+          </section>
+          <section class="pant style_wknd_cmdr">
+            <img class="pant_img" src="images/wknd_commander.jpg">
+            <div class="pant_text">
+              <h2 class="pant_style_name">WKND Commander</h2>
+              <h3>$32</h3>
+              <form class="pant_form">
+                <label class="size_label" for="wknd_cmdr_size">Size</label>
+                <select class="size_select" id="wknd_cmdr_size">
+                  <option value="size_S">Small</option>
+                  <option value="size_M">Medium</option>
+                  <option value="size_L">Large</option>
+                </select>
+                <label class="qty_label" for="wknd_cmdr_qty">Qty</label>
+                <select type="number" id="aztec_mint_qty" class="quantity"  name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <button class="add_to_cart" id="wknd_cmdr_cart">Add to Cart</button>
+              </form>
+            <div>
+          </section>
+        </section>
+      </section>
+      <section class="pant_description_sidebar">
+          <h3>Product Details</h3>
+          <ul class="product_detail_list">
+            <li>- 100% Polyster </li>
+            <li>- Full-Elastic Band</li>
+            <li>- Machine Washable</li>
+            <li>- 3 Pocket Design: 2 Side Pockets, 1 Rear Wallet Pocket</li>
+            <li>- Tapered Ankle</li>
+          </ul>
+          <img src="images/sidebar.jpg" class="sidebar_img">
+        </section>
     </main>
     <footer>
-      <p>Copyright &copy 2014 Weekend Pants Unlimited. All Rights Reserved.</p>
+      <div class="footer_social_icons">
+        <a href="https://twitter.com/">
+          <span class="icon-twitter"></span>
+        </a>
+      </div>
       <h3><strong>Seattle </strong> ♥ <strong> Detroit</strong></h3>
-      <div>Social Link Icons?</div>
+      <p class="footer_text">Copyright &copy 2014 Weekend Pants Unlimited. All Rights Reserved.</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

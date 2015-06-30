@@ -1,8 +1,105 @@
 /*media queries*/
   /*base styles for mobile*/
-@media (max-width: 31.25em)  {
+@media (max-width: 37.5em)  {
   section {
-    width: 90%;
+    width: 95%;
     margin: auto, 1em;
   }
+  .wknd_logo, .sidebar_img {
+    display: none;
+  }
+  .nav_links {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    padding: .5em 0;
+    border-top: 1px solid black;
+    font-size: 1.25em;
+  }
+  .nav_links:last-of-type {
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+  }
+  .pant_description_sidebar {
+    width: 90%;
+    padding: .5em;
+    margin: .5em auto;
+  }
+  .pant {
+    padding: .5em 0 .5em 0;
+    margin: .5em auto;
+    border-top: 1px solid black;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  .pant:last-of-type {
+    border-bottom: 1px solid black;
+  }
+  .pant_text {
+    margin-left: .25em;
+  }
+  .pant_img {
+    width: 20em;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 8em;
+  }
+  .pant_style_name {
+    font-size: 1.25em;
+    margin: 0 0 .5em 0;
+  }
 }
+@media (min-width: 37.51em) {
+  header {
+    height: 5em;
+    background-color: #ededed;
+  }
+  .nav_links {
+    margin: 1em .5em 0 .5em;
+  }
+  .pants_content {
+    position: relative;
+  }
+  .pant_text {
+    margin: 2em 0 0 .25em;
+  }
+  .pant_description_sidebar {
+    position: absolute;
+    top: 5em;
+    height: 40em;
+    width: 10em;
+    background-color: black;
+    color: white;
+  }
+  .tagline {
+    margin: 0 0 1em 8em;
+  }
+  .flex_container {
+    margin-left: 10em;
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-flow: row wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: center;
+            justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  .pant {
+    width: 20em;
+    height: 18em;
+    margin: .5em;
+  }
+  .pant_img {
+    width: 10em;
+    float: left;
+  }
+}
+

@@ -1,9 +1,65 @@
-header, main, footer {
-  width: 100%
+header, main {
+  max-width: 60em;
+  margin: 0 auto;
 }
-/*borders and padding to view major blocks until formatted*/
-section, ol, header, footer, main, menu {
-  border: 1px solid black;
-  margin: .5em 0;
+header {
+  margin-bottom: 1em;
+}
+.logo_text {
+  padding-top: .5em;
+}
+h1 {
+  text-align: center;
+}
+nav {
+  text-align: center;
+}
+.nav_links {
+  display: inline-block;
+}
+footer {
+  clear: both;
+}
+.pants_content {
+  text-align: center;
+  max-width: 56em;
+  margin: 0 auto;
+}
+.pants_catalog {
+  max-width: 44em;
+  min-height: 40em;
+}
+.pant {
+  text-align: center;
+}
+.pant_img {
+  max-width: 10em;
+}
+.pant_text {
+  float: left;
+  width: 8em;
+}
+.pant_style_name {
+  font-size: 1.25em;
+  margin: 0 0 .5em 0;
+}
+.pant_description_sidebar {
   padding: .5em;
+  text-align: left;
+}
+.product_detail_list {
+  line-height: 1.75em;
+  font-size: .75em;
+  margin-left: .5em;
+  text-indent: -.75em;
+}
+.sidebar_img {
+  width: 9em;
+  margin: 4.75em 0 0 0;
+}
+.pant_style_name {
+  font-size: 1.25em;
+}
+.size_select, .quantity, .add_to_cart {
+  margin-top: .5em;
 }
