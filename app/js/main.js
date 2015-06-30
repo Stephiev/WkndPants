@@ -1,5 +1,6 @@
 
 // placeholder
+
 //retrieves localStorage data for form fields
 $(document).ready(function () {
   function init() {

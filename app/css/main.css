@@ -359,3 +359,16 @@ h2, h3 {
 .icon-twitter:before {
   content: "\ea91";
 }
+
+ /* @font-face {
+     font-family: 'Montserrat';
+     src: url('fonts/montserrat/Montserrat-UltraLight.otf') format('truetype');
+     font-weight: normal;
+     font-style: UltraLight;
+}
+  @font-face {
+     font-family: 'Montserrat';
+     src: url('fonts/montserrat/Montserrat-Light.otf') format('truetype');
+     font-weight: normal;
+     font-style: Light;
+}*/

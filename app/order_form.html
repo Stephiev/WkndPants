@@ -14,66 +14,6 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/modules.css">
     <link rel="stylesheet" href="css/states.css">
-    <style type="text/css">
-   /* @font-face {
-     font-family: 'Montserrat';
-     src: url('fonts/montserrat/Montserrat-UltraLight.otf') format('truetype');
-     font-weight: normal;
-     font-style: UltraLight;
-}
-  @font-face {
-     font-family: 'Montserrat';
-     src: url('fonts/montserrat/Montserrat-Light.otf') format('truetype');
-     font-weight: normal;
-     font-style: Light;
-}*/
-  .order_form {
-    font-style: UltraLight;
-    margin: 0 0 2em 0;
-    padding: 0 1em;
-    max-width: 1024px;
-  }
-    .input_orderpage {
-  display: block;
-  margin: 0;
-  width: 100%;
-  font-size: 1.2em;
-  appearance: none;
-  box-shadow: none;
-  border-radius: none;
-  margin-bottom: .5em;
-  margin-top: .2em;
-}
-  .input[placeholder] {
-    font-style: UltraLight;
-    font-size: 1em;
-  }
-.fieldset_orderpage {
-  border: 5px solid #ededed;
-}
-.description_orderpage {
-  font-size: .9em;
-  font-weight: bolder;
-  margin-bottom: .5em;
-}
-.legend_cart-form {
-  margin: 0 0 1.2em 0;
-  padding-top: 1.5em;
-  font-size: 1.4em;
-  border-bottom: 2px solid #ededed;
-}
-#emailnotification_orderpage {
-  font-size: .6em;
-  margin-bottom: 1em;
-}
-label {
-  font-size: .8em;
-}
-.submit_button {
-  margin-top: .5em;
-  height: 2.5em;
-}
-</style>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -104,25 +44,25 @@ label {
         <legend class="legend_cart-form">Shipping & Contact</legend>
           <ul>
             <h4 class="description_orderpage">Your Email Address</h4>
-            <li><label for="shipping_email">Email: </label>&#42;
+            <li><label for="shipping_email" class="label_orderpage">Email: </label>&#42;
             <input id="shipping_email" name="shipping_email" placeholder="Email" type="email" class="stored input_orderpage" required></li>
             <p id="emailnotification_orderpage">Receipts and notifications will be sent to this email address.</p>
             <h4 class="description_orderpage">Shipping Address</h4>
-            <li><label for="shipping_firstname">First Name:</label>&#42;
+            <li><label for="shipping_firstname" class="label_orderpage">First Name:</label>&#42;
             <input id="shipping_firstname" name="shipping_firstname" placeholder="First Name" type="text" class="stored input_orderpage" required></li>
-            <li><label for="shipping_lastname">Last Name:</label>&#42;
+            <li><label for="shipping_lastname" class="label_orderpage">Last Name:</label>&#42;
             <input id="shipping_lastname" name="shipping_lastname" placeholder="Last Name" type="text" class="stored input_orderpage" required></li>
-            <li><label for="shipping_street1">Street Address 1:</label>&#42;
+            <li><label for="shipping_street1" class="label_orderpage">Street Address 1:</label>&#42;
             <input id="shipping_street1" name="shipping_street1" placeholder="Street Address 1" type="text" class="stored input_orderpage" required></li>
-            <li><label for="shipping_street2">Street Address 2: </label>
+            <li><label for="shipping_street2" class="label_orderpage">Street Address 2: </label>
             <input id="shipping_street2" name="shipping_street2" placeholder="Street Address 2" type="text" class="stored input_orderpage"></li>
-            <li><label for="shipping_city">City:</label>&#42;
+            <li><label for="shipping_city" class="label_orderpage">City:</label>&#42;
             <input id="shipping_city" name="shipping_city" placeholder="City" type="text" class="stored input_orderpage" required></li>
-            <li><label for="shipping_state">State:</label>&#42;
+            <li><label for="shipping_state" class="label_orderpage">State:</label>&#42;
             <input id="shipping_state" name="shipping_state" placeholder="State" type="text" class="stored input_orderpage" required></li>
-            <li><label for="shipping_zip">Zip Code:</label>&#42;
+            <li><label for="shipping_zip" class="label_orderpage">Zip Code:</label>&#42;
             <input id="shipping_zip" name="shipping_zip" placeholder="Zip/Postal"type="text" class="stored input_orderpage" required></li>
-            <li><label for="phone">Phone:</label>&#42;
+            <li><label for="phone" class="label_orderpage">Phone:</label>&#42;
             <input type="tel" name="phone" placeholder="Phone Number" id="phone" class="stored input_orderpage"></li>
           </ul>
         </fieldset>
@@ -132,26 +72,26 @@ label {
               <h4 class="description_orderpage">Choose a Delivery Option</h4>
               <li>
               <input class="shipping_standard" name="shipping_standard" type="radio" checked required>
-              <label for="shipping_standard">Shipping - $7.95</label></li>
+              <label for="shipping_standard" class="label_orderpage">Shipping - $7.95</label></li>
             </ul>
           </fieldset>
           <fieldset class="fieldset_orderpage">
             <legend class="legend_cart-form">Billing</legend>
             <ul>
               <h4 class="description_orderpage">Billing Address</h4>
-                <li><label for="billing_firstname">First Name:</label>&#42;
+                <li><label for="billing_firstname" class="label_orderpage">First Name:</label>&#42;
                 <input id="billing_firstname" name="billing_firstname" placeholder="First Name" type="text" class="stored input_orderpage" required></li>
-                <li><label for="billing_lastname">Last Name:</label>&#42;
+                <li><label for="billing_lastname" class="label_orderpage">Last Name:</label>&#42;
                 <input id="billing_lastname" name="billing_lastname" placeholder="Last Name" type="text" class="stored input_orderpage" required></li>
-                <li><label for="billing_street1">Street Address 1:</label>&#42;
+                <li><label for="billing_street1" class="label_orderpage">Street Address 1:</label>&#42;
                 <input id="billing_street1" name="billing_street1" placeholder="Street Address 1" type="text" class="stored input_orderpage" required></li>
-                <li><label for="billing_street2">Street Address 2:</label>
+                <li><label for="billing_street2" class="label_orderpage">Street Address 2:</label>
                 <input id="billing_street2" name="billing_street2" placeholder="Street Address 2" type="text" class="stored input_orderpage" ></li>
-                <li><label for="billing_city">City:</label>&#42;
+                <li><label for="billing_city" class="label_orderpage">City:</label>&#42;
                 <input id="billing_city" name="billing_city" placeholder="City" type="text" class="stored input_orderpage" required></li>
-                <li><label for="billing_state">State:</label>&#42;
+                <li><label for="billing_state" class="label_orderpage">State:</label>&#42;
                 <input id="billing_state" name="billing_state" placeholder="State" type="text" class="stored input_orderpage" required></li>
-                <li><label for="billing_zip">Zip Code:</label>&#42;
+                <li><label for="billing_zip" class="label_orderpage">Zip Code:</label>&#42;
                 <input id="billing_zip" name="billing_zip" placeholder="Zip/Postal"type="text" class="stored input_orderpage" required></li>
               </ul>
             </fieldset>
@@ -161,13 +101,13 @@ label {
             <legend class="legend_cart-form">Card Information</legend>
               <ul>
                 <h4 class="description_orderpage">Secure Payment</h4>
-                <li><label for="cardnumber">Card number: </label>
+                <li><label for="cardnumber" class="label_orderpage">Card number: </label>
                 <input id="cardnumber" class="input_orderpage" name="cardnumber" placeholder="4242424242424242" type="text" required></li>
-                <li><label for="card_month_expiration">Expiration Month: </label>
+                <li><label for="card_month_expiration" class="label_orderpage">Expiration Month: </label>
                 <input id="card_month_expiration" class="input_orderpage" name="card_month_expiration" placeholder="XX" type="text" required></li>
-                <li><label for="card_year_expiration">Expiration Year: </label>
+                <li><label for="card_year_expiration" class="label_orderpage">Expiration Year: </label>
                 <input id="card_year_expiration" class="input_orderpage"  name="card_year_expiration" placeholder="XXXX" type="text" required></li>
-                <li><label for="secure">Security code: </label>
+                <li><label for="secure" class="label_orderpage">Security code: </label>
                 <input id="secure" class="input_orderpage" name="secure" placeholder="XXX" type="text" required></li>
               <input type="submit" class="submit_button input_orderpage" name="mysubmit" value="SUBMIT ORDER" />
             </ul>
