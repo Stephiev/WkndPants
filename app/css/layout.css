@@ -1,15 +1,9 @@
-header, main, footer {
-  width: 100%
+header, main {
+  max-width: 60em;
+  margin: 0 auto;
 }
-/*borders and padding to view major blocks until formatted*/
-/*section, ol, header, footer, main, menu {
-  border: 1px solid black;
-  margin: .5em 0;
-  padding: .5em;
-}*/
 header {
   margin-bottom: 1em;
-  background-color: #ededed;
 }
 .logo_text {
   padding-top: .5em;
@@ -20,7 +14,7 @@ h1 {
 nav {
   text-align: center;
 }
-nav li {
+.nav_links {
   display: inline-block;
 }
 footer {
@@ -41,6 +35,14 @@ footer {
 .pant_img {
   max-width: 10em;
 }
+.pant_text {
+  float: left;
+  width: 8em;
+}
+.pant_style_name {
+  font-size: 1.25em;
+  margin: 0 0 .5em 0;
+}
 .pant_description_sidebar {
   padding: .5em;
   text-align: left;
@@ -48,10 +50,12 @@ footer {
 .product_detail_list {
   line-height: 1.75em;
   font-size: .75em;
+  margin-left: .5em;
+  text-indent: -.75em;
 }
 .sidebar_img {
   width: 9em;
-  margin: 5em 0 0 0;
+  margin: 4.75em 0 0 0;
 }
 .pant_style_name {
   font-size: 1.25em;

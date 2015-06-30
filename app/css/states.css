@@ -8,7 +8,6 @@
   .wknd_logo, .sidebar_img {
     display: none;
   }
-
   .nav_links {
     width: 90%;
     margin: 0 auto;
@@ -41,8 +40,6 @@
     border-bottom: 1px solid black;
   }
   .pant_text {
-    float: left;
-    width: 8em;
     margin-left: .25em;
   }
   .pant_img {
@@ -53,24 +50,36 @@
   }
   .pant_style_name {
     font-size: 1.25em;
-    margin: 1em 0 .5em 0;
+    margin: 0 0 .5em 0;
   }
 }
 @media (min-width: 37.51em) {
   header {
     height: 5em;
+    background-color: #ededed;
   }
   .nav_links {
-    margin: 0 .5em 0 .5em;
+    margin: 1em .5em 0 .5em;
+  }
+  .pants_content {
+    position: relative;
+  }
+  .pant_text {
+    margin: 2em 0 0 .25em;
   }
   .pant_description_sidebar {
+    position: absolute;
+    top: 5em;
     height: 40em;
     width: 10em;
-    float: left;
     background-color: black;
     color: white;
   }
+  .tagline {
+    margin: 0 0 1em 8em;
+  }
   .flex_container {
+    margin-left: 10em;
     position: relative;
     display: -webkit-flex;
     display: flex;
@@ -88,15 +97,6 @@
     height: 18em;
     margin: .5em;
   }
-  .pant_description_sidebar {
-    height: 40em;
-    width: 10em;
-    float: left;
-    margin-right: 1em;
-    text-align: left;
-    background-color: black;
-    color: white;
-}
   .pant_img {
     width: 10em;
     float: left;
