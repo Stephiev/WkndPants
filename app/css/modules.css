@@ -4,7 +4,6 @@
   float: right;
 }
 
-
 /*splash images*/
 @-webkit-keyframes slider {
   0% { left: 0%; }
@@ -44,7 +43,7 @@
 }
 .slider {
   width: 90%;
-  max-width: 1000px;
+  max-width: 60em;
   margin: 0 auto 2em auto;
   overflow: hidden;
 }
@@ -82,3 +81,77 @@ footer {
   font-size: .6em;
   margin: 1em 0 2em 0;
 }
+/* Order page - form - Cart */
+.order_form {
+  font-weight: 200;
+  padding: 0 1em;
+  max-width: 60em;
+  margin: 0 auto 1em auto;
+}
+.input_orderpage {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-size: 1.2em;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  margin-bottom: .5em;
+  margin-top: .2em;
+}
+.input_about {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-size: 1.2em;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  margin-bottom: 1em;
+  margin-top: .2em;
+}
+.input_orderpage[placeholder] {
+  font-weight: 200;
+  font-size: 1.1em;
+}
+.fieldset_orderpage {
+  border: 5px solid #ededed;
+}
+.description_orderpage {
+  font-size: .9em;
+  font-weight: 700;
+  margin-bottom: .5em;
+}
+.legend_cart-form {
+  margin: 0 0 1.2em 0;
+  padding-top: 1.5em;
+  font-size: 1.4em;
+  border-bottom: 2px solid #ededed;
+}
+#emailnotification_orderpage {
+  font-size: .6em;
+  margin-bottom: 1em;
+}
+.label_orderpage {
+  font-size: .8em;
+}
+.submit_button {
+  margin-top: .5em;
+  height: 2.5em;
+}
+.p_about {
+  margin: 2em;
+}
+.p_about_contact {
+  margin: .5em 0 1.5em 0;
+}
+.about_form {
+  font-weight: 200;
+  margin: 0 0 2em 0;
+  padding: 0 1em;
+  max-width: 60em;
+}
+.contact_fieldset {
+  border: 5px solid #ededed;
+}
+
