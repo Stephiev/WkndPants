@@ -34,36 +34,43 @@
             <a href="about.html">About</a>
           </li>
           <li class="nav_links">
-            <a href="">Cart</a>
+            <a href="order_form.html">Cart</a>
           </li>
         </ol>
       </nav>
     </header>
     <main>
-      <section>bio</section>
       <section>
-        <form class="contact" role="form">
+        <h1>The Weekend Is Calling...</h1>
+        <p class="p_about">
+          Weekend Pants Unlimited is the collective effort of a group of designers, engineers, photographers, and scientists in Detroit and Seattle coming together to create something beautiful. We believe in community, we believe in beauty, we believe in humans. Our designs are run in small batches so availability is limited, but as soon as one design sells out we'll have it replaced with another. Keep an eye out for what's fresh and new!
+        </p>
+      </section>
+      <section>
+        <form class="contact about_form" role="form">
           <fieldset class="contact_fieldset">
+            <legend>Contact Us</legend>
+            <p class="p_about_contact">If you have any questions, complaints, things you want to tell us.. Fill out the form and one of our representatives will get back to you as soon as possible. Thanks</p>
             <ul>
               <li class="contact_li">
                 <label for="contact_name">First Name:</label>
-                <input id="first_name" role="textbox" aria-required="true" type="text" placeholder="First" title="First Name" autofocus/>
+                <input id="first_name" role="textbox" aria-required="true" class="input_about stored" type="text" placeholder="First" title="First Name" autofocus/>
               </li>
               <li class="contact_li">
                 <label for="last_name">Last Name:</label>
-                <input id="last_name" role="textbox" aria-required="true" type="text" placeholder="Last" title="Last Name" />
+                <input id="last_name" role="textbox" aria-required="true" class="input_about stored" type="text" placeholder="Last" title="Last Name" />
               </li>
               <li class="contact_li">
                 <label for="contact_email">Email Address:</label>
-                <input id="contact_email" role="textbox" aria-required="true" type="email" name="email" title="email address" placeholder="Email"/>
+                <input id="contact_email" role="textbox" aria-required="true" class="input_about stored" type="email" name="email" title="email address" placeholder="Email"/>
               </li>
               <li id="contact_li">
                 <label for="contact_subject">Subject:</label>
-                <textarea id="contact_subject" role="textbox" rows=1 cols=110 aria-required="true" type="textbox" name="message" placeholder="Subject"></textarea>
+                <textarea id="contact_subject" role="textbox" rows=1 cols=110 aria-required="true" type="textbox" name="message" class="input_about stored"placeholder="Subject"></textarea>
               </li>
               <li id="contact_li">
                 <label for="contact_message">Message:</label>
-                <textarea id="contact_message" role="textbox" rows=5 cols=110 aria-required="true" type="textbox" name="message" placeholder="Message"></textarea>
+                <textarea id="contact_message" role="textbox" rows=5 cols=110 aria-required="true" type="textbox" class="input_about stored" name="message" placeholder="Message"></textarea>
               </li>
             <button class="contact_button"id="send_message" title="enter your message here" role="button">Submit</button>
           </fieldset>

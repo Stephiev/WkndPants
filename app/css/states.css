@@ -53,6 +53,7 @@
     margin: 0 0 .5em 0;
   }
 }
+/* styles for screens larger than 600px */
 @media (min-width: 37.51em) {
   header {
     height: 5em;
