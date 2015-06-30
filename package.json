@@ -1,0 +1,89 @@
+{
+  "name": "final_project",
+  "version": "0.1.0",
+  "description": "Guided Tour Webapp ===",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "grunt build",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stephiev/WkndPants.git"
+  },
+  "author": [
+    {
+      "name": "Stephanie",
+      "email": "stephievictoria@gmail.com"
+    },
+    {
+      "name": "Josh",
+      "email": "placeholder@domain.com"
+    },
+    {
+      "name": "Ryan",
+      "email": "placeholder@domain.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Stephiev/WkndPants/issues"
+  },
+  "homepage": "https://github.com/Stephiev/WkndPants",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "chai": "^3.0.0",
+    "chai-http": "^1.0.0",
+    "express": "^4.12.4",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.3",
+    "grunt-cli": "^0.1.13",
+    "grunt-concurrent": "^1.0.1",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-nodemon": "^0.4.0",
+    "grunt-sass": "^1.0.0",
+    "grunt-webpack": "^1.0.8",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.36",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "mongoose": "^4.0.5",
+    "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.2.0",
+    "phantomjs": "^1.9.17",
+    "stripe": "^3.5.0",
+    "superagent": "^1.2.0",
+    "webpack": "^1.9.10",
+    "webpack-dev-server": "^1.9.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "chai-http": "^1.0.0",
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^1.0.1",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-karma": "^0.11.0",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-nodemon": "^0.4.0",
+    "grunt-sass": "^1.0.0",
+    "grunt-webpack": "^1.0.8",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.36",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "mocha": "^2.2.5",
+    "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.2.0",
+    "phantomjs": "^1.9.17",
+    "superagent": "^1.2.0",
+    "webpack": "^1.9.10",
+    "webpack-dev-server": "^1.9.0"
+  }
+}
