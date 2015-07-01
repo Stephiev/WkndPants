@@ -43,10 +43,10 @@ router.patch("/pants/checkout_inventory", function(req, res) {
 
     for (var i=0; i<req.body.altered.length; i++) {
 
-      style  = req.body.altered[i].style
-      small  = req.body.altered[i].quantity[0];
-      medium = req.body.altered[i].quantity[1];
-      large  = req.body.altered[i].quantity[2]
+      style  = req.body.altered[i].style;
+      small  = req.body.altered[i].sizes.small;
+      medium = req.body.altered[i].sizes.medium;
+      large  = req.body.altered[i].sizes.large;
 
       dbSearch(style, small, medium, large);
     }
@@ -78,10 +78,10 @@ router.patch("/pants/checkout_inventory", function(req, res) {
 
     for (var i=0; i<req.body.altered.length; i++) {
 
-      style  = req.body.altered[i].style
-      small  = req.body.altered[i].quantity[0];
-      medium = req.body.altered[i].quantity[1];
-      large  = req.body.altered[i].quantity[2]
+      style  = req.body.altered[i].style;
+      small  = req.body.altered[i].sizes.small;
+      medium = req.body.altered[i].sizes.medium;
+      large  = req.body.altered[i].sizes.large;
 
       dbSearch(style, small, medium, large);
     }
