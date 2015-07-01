@@ -15,3 +15,6 @@ $(document).ready(function () {
 $('.stored').change(function () {
   localStorage[$(this).attr('name')] = $(this).val();
 });
+
+// cart
+
