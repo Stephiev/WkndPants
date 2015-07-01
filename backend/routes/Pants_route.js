@@ -11,8 +11,11 @@ module.exports = function(router) {
 
   router.get("/wkndpants", function(req, res) {
     Pant.find({}, function(err, pants) {
+      if (err) {
+        console.log(err);
+        res.status(500).json({ msg: "Internal server error"});
+      }
       res.json(pants)
-      console.log(pants);
     })
   })
 
