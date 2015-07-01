@@ -24,6 +24,7 @@ nav {
 footer {
   clear: both;
 }
+/*pants catalog*/
 .pants_content {
   text-align: center;
   max-width: 56em;
@@ -67,3 +68,35 @@ footer {
 .size_select, .quantity, .add_to_cart {
   margin-top: .5em;
 }
+
+/* cart */
+.shopping_cart {
+  width: 90%;
+  margin: 1em auto;
+}
+.cart_heading {
+  border-bottom: 1px solid gray;
+  margin: 0 0 .5em 0;
+}
+.cart_heading_h2 {
+  display: inline;
+}
+.cart_heading_span {
+  font-weight: 200;
+  font-size: .75em;
+  padding-top: .25em;
+  float: right;
+  margin: 0 1em 0 0;
+}
+.cart_subtotal {
+  border-top: 1px solid gray;
+  text-align: right;
+  margin: .5em 0 0 0;
+}
+.cart_qty_input {
+  width: 2em;
+}
+
+
+
+
