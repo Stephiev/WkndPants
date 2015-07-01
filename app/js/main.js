@@ -17,8 +17,6 @@ $('.stored').change(function () {
 });
 
 // cart
-var cart = [ ];
-
 var shoppingCart = [
   {"style": "The Basics", "quantity": [0, 0, 0]},
   {"style": "Purple Mountain", "quantity": [0, 0, 0]},
