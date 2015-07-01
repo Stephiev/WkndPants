@@ -3,7 +3,8 @@
 var mongoose = require('mongoose');
 
 var pantsSchema = new mongoose.Schema({
-  style: { type: String, enum: ["Aztec Mint", "The Basics", "WKND Commander", "Purple Mountain"] },
+  style: { type: String, unique: true, enum: ["Aztec Mint", "The Basics", "WKND Commander", "Purple Mountain"] },
+  price: { type: Number, required: true },
   sizes: {
     small: Number,
     medium: Number,
