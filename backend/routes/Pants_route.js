@@ -15,7 +15,7 @@ module.exports = function(router) {
         console.log(err);
         res.status(500).json({ msg: "Internal server error"});
       }
-      res.json(pants)
+      res.status(200).json(pants)
     })
   })
 
@@ -29,7 +29,7 @@ module.exports = function(router) {
         return res.status(500).json({ "success": false });
       };
 
-      return res.json({ "success": true });
+      return res.status(200).json({ "success": true });
     });
   });
 

@@ -10,6 +10,6 @@ var pantsSchema = new mongoose.Schema({
     medium: Number,
     large: Number,
   }
-})
+});
 
 module.exports = mongoose.model("Pant", pantsSchema);
