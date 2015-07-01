@@ -8,7 +8,7 @@ var chaiHttp          = require("chai-http");
 var expect            = chai.expect;
 var mongoose          = require("mongoose");
 var wkndCommanders    = {"price": 32.00, "style": "WKND Commander", "sizes": { "small": 10, "medium": 18, "large": 18}};
-var newWkndCommanders = {"altered": [{"style": "WKND Commander", "quantity": [2, 1, 0]}]};
+var newWkndCommanders = {"altered": [{"style": "The Basics", "sizes": { "small": 2, "medium": 0, "large": 1}}]};
 
 
 chai.use(chaiHttp);
