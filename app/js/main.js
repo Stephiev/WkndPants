@@ -51,11 +51,10 @@ var shoppingCart = [
     }
   }
 ];
-var basic = shoppingCart[0];
+var basic  = shoppingCart[0];
 var purple = shoppingCart[1];
-var wknd = shoppingCart[2];
-var aztec = shoppingCart[3];
-
+var wknd   = shoppingCart[2];
+var aztec  = shoppingCart[3];
 
 $('#aztec_mint_cart').on('click', function(e){
   e.preventDefault();
