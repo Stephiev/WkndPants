@@ -97,6 +97,8 @@
         <legend class="legend_cart-form">Billing</legend>
         <ul>
           <h4 class="description_orderpage">Billing Address</h4>
+          <input type="checkbox" id="billing_shipping_same" name="billing_shipping_same" value="yes" onclick="addToBilling()">
+          <label for="billing_shipping_same">Billing Address Is The Same As Shipping Address</label>
           <li>
             <label for="billing_firstname" class="label_orderpage">First Name:</label>&#42;
               <input id="billing_firstname" name="billing_firstname" placeholder="First Name" type="text" class="stored input_orderpage" required>
@@ -176,6 +178,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/order_form.js"></script>
 
   </body>
 </html>
