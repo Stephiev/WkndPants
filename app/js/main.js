@@ -1,6 +1,6 @@
 //retrieves localStorage data for form fields
-$(document).ready(function () {
-  function init() {
+$(document).ready(function(){
+  function init(){
     $('.stored').each(function(){
       var name = $(this).attr('name');
       var val = $(this).val();
@@ -11,18 +11,20 @@ $(document).ready(function () {
   }
   init();
 });
-//stores form data on keyup with class of "stored"
-$('.stored').change(function () {
+//stores form data on change with class of "stored"
+$('.stored').change(function(){
   localStorage[$(this).attr('name')] = $(this).val();
 });
 
-// cart
+// pants.html
 var shoppingCart = [
   {"style": "The Basics", "quantity": [0, 0, 0]},
   {"style": "Purple Mountain", "quantity": [0, 0, 0]},
   {"style": "WKND Commander", "quantity": [0, 0, 0]},
   {"style": "Aztec Mint", "quantity": [0, 0, 0]}
 ];
+
+
 
 var parseSize = function(size) {
   if (size == 'size_S') {
@@ -40,6 +42,7 @@ $('#aztec_mint_cart').on('click', function(e){
   var qty = $('#aztec_mint_qty').val();
   var sizeVal = parseSize(size);
   shoppingCart[3].quantity[sizeVal] += eval(qty);
+  storeCart();
   console.log(shoppingCart[3].style + ", " + shoppingCart[3].quantity);
 });
 
@@ -49,6 +52,7 @@ $('#the_basics_cart').on('click', function(e){
   var qty = $('#the_basics_qty').val();
   var sizeVal = parseSize(size);
   shoppingCart[0].quantity[sizeVal] += eval(qty);
+  storeCart();
   console.log(shoppingCart[0].style + ", " + shoppingCart[0].quantity);
 });
 
@@ -58,6 +62,7 @@ $('#purple_mountain_cart').on('click', function(e){
   var qty = $('#purple_mountain_qty').val();
   var sizeVal = parseSize(size);
   shoppingCart[1].quantity[sizeVal] += eval(qty);
+  storeCart();
   console.log(shoppingCart[1].style + ", " + shoppingCart[1].quantity);
 });
 
@@ -67,6 +72,7 @@ $('#wknd_cmdr_cart').on('click', function(e){
   var qty = $('#wknd_cmdr_qty').val();
   var sizeVal = parseSize(size);
   shoppingCart[2].quantity[sizeVal] += eval(qty);
+  storeCart();
   console.log(shoppingCart[2].style + ", " + shoppingCart[2].quantity);
 });
 
@@ -75,4 +81,12 @@ $('#log').on('click', function() {
   console.log(shoppingCart[1].style + ", " + shoppingCart[1].quantity);
   console.log(shoppingCart[2].style + ", " + shoppingCart[2].quantity);
   console.log(shoppingCart[3].style + ", " + shoppingCart[3].quantity);
+});
+
+var storeCart = function() {
+  localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+};
+$(document).ready(function(){
+  var retrieveCart = JSON.parse(localStorage.getItem('shoppingCart'));
+  shoppingCart = retrieveCart;
 });
