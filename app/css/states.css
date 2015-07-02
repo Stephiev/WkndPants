@@ -34,6 +34,7 @@
     flex-direction: row;
     -webkit-flex-direction: row;
     flex-wrap: wrap;
+    -webkit-flex-flow: row wrap;
     justify-content: center;
     -webkit-justify-content: center
     align-content: center;

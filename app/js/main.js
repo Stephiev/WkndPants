@@ -18,75 +18,101 @@ $('.stored').change(function(){
 
 // pants.html
 var shoppingCart = [
-  {"style": "The Basics", "quantity": [0, 0, 0]},
-  {"style": "Purple Mountain", "quantity": [0, 0, 0]},
-  {"style": "WKND Commander", "quantity": [0, 0, 0]},
-  {"style": "Aztec Mint", "quantity": [0, 0, 0]}
+  {
+    "style": "The Basics",
+    "sizes": {
+      "small": 0,
+      "medium": 0,
+      "large": 0
+    }
+  },
+  {
+    "style": "Purple Mountain",
+     "sizes": {
+      "small": 0,
+      "medium": 0,
+      "large": 0
+    }
+  },
+  {
+    "style": "WKND Commander",
+    "sizes": {
+      "small": 0,
+      "medium": 0,
+      "large": 0
+    }
+  },
+  {
+    "style": "Aztec Mint",
+    "sizes": {
+      "small": 0,
+      "medium": 0,
+      "large": 0
+    }
+  }
 ];
-
-
-
-var parseSize = function(size) {
-  if (size == 'size_S') {
-    return 0;
-  } else if (size == 'size_M') {
-    return 1;
-  } else if (size == 'size_L') {
-    return 2;
-  };
-};
 
 $('#aztec_mint_cart').on('click', function(e){
   e.preventDefault();
-  var size = $('#aztec_mint_size').val();
+  var aztec = shoppingCart[3];
+  var pantSize = $('#aztec_mint_size').val();
   var qty = $('#aztec_mint_qty').val();
-  var sizeVal = parseSize(size);
-  shoppingCart[3].quantity[sizeVal] += eval(qty);
+  aztec.sizes[pantSize] += eval(qty);
   storeCart();
-  console.log(shoppingCart[3].style + ", " + shoppingCart[3].quantity);
 });
 
 $('#the_basics_cart').on('click', function(e){
   e.preventDefault();
-  var size = $('#the_basics_size').val();
+  var basics = shoppingCart[0];
+  var pantSize = $('#the_basics_size').val();
   var qty = $('#the_basics_qty').val();
-  var sizeVal = parseSize(size);
-  shoppingCart[0].quantity[sizeVal] += eval(qty);
+  basics.sizes[pantSize] += eval(qty);
   storeCart();
-  console.log(shoppingCart[0].style + ", " + shoppingCart[0].quantity);
 });
 
 $('#purple_mountain_cart').on('click', function(e){
   e.preventDefault();
-  var size = $('#purple_mountain_size').val();
+  var purple = shoppingCart[1];
+  var pantSize = $('#purple_mountain_size').val();
   var qty = $('#purple_mountain_qty').val();
-  var sizeVal = parseSize(size);
-  shoppingCart[1].quantity[sizeVal] += eval(qty);
+  purple.sizes[pantSize] += eval(qty);
   storeCart();
-  console.log(shoppingCart[1].style + ", " + shoppingCart[1].quantity);
 });
 
 $('#wknd_cmdr_cart').on('click', function(e){
   e.preventDefault();
-  var size = $('#wknd_cmdr_size').val();
+  var wknd = shoppingCart[2];
+  var pantSize = $('#wknd_cmdr_size').val();
   var qty = $('#wknd_cmdr_qty').val();
-  var sizeVal = parseSize(size);
-  shoppingCart[2].quantity[sizeVal] += eval(qty);
+  wknd.sizes[pantSize] += eval(qty);
   storeCart();
-  console.log(shoppingCart[2].style + ", " + shoppingCart[2].quantity);
 });
 
+var runLog = function() {
+  var basics = shoppingCart[0];
+  var purple = shoppingCart[1];
+  var wknd = shoppingCart[2];
+  var aztec = shoppingCart[3];
+  console.log(aztec.style + ", S:" + aztec.sizes.small + ", M:" + aztec.sizes.medium + ", L:" + aztec.sizes.large);
+  console.log(basics.style + ", S:" + basics.sizes.small + ", M:" + basics.sizes.medium + ", L:" + basics.sizes.large);
+  console.log(purple.style + ", S:" + purple.sizes.small + ", M:" + purple.sizes.medium + ", L:" + purple.sizes.large);
+  console.log(wknd.style + ", S:" + wknd.sizes.small + ", M:" + wknd.sizes.medium + ", L:" + wknd.sizes.large);
+};
 $('#log').on('click', function() {
-  console.log(shoppingCart[0].style + ", " + shoppingCart[0].quantity);
-  console.log(shoppingCart[1].style + ", " + shoppingCart[1].quantity);
-  console.log(shoppingCart[2].style + ", " + shoppingCart[2].quantity);
-  console.log(shoppingCart[3].style + ", " + shoppingCart[3].quantity);
+  runLog();
 });
 
+var cartStored;
 var storeCart = function() {
   localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+  cartStored = true;
+  localStorage.setItem('cartStored', JSON.stringify(cartStored))
 };
+
 $(document).ready(function(){
-  var retrieveCart = JSON.parse(localStorage.getItem('shoppingCart'));
-  shoppingCart = retrieveCart;
+  if (JSON.parse(localStorage.getItem('cartStored')) == true) {
+    var retrieveCart = JSON.parse(localStorage.getItem('shoppingCart'));
+      shoppingCart = retrieveCart;
+    };
 });
+

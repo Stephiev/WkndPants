@@ -24,6 +24,7 @@ nav {
 footer {
   clear: both;
 }
+/*pants catalog*/
 .pants_content {
   text-align: center;
   max-width: 56em;
@@ -67,3 +68,8 @@ footer {
 .size_select, .quantity, .add_to_cart {
   margin-top: .5em;
 }
+
+
+
+
+

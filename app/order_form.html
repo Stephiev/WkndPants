@@ -38,6 +38,14 @@
         </ol>
       </nav>
     </header>
+    <section class="shopping_cart">
+      <ul>
+        <li class="cart_heading">
+          <h2 class="cart_heading_h2">Shopping Cart</h2>
+        </li>
+        <li class="cart_subtotal">Subtotal: $<span id="subtotal"></span></li>
+      </ul>
+    </section>
     <form class="order_form">
       <fieldset class="fieldset_orderpage">
         <legend class="legend_cart-form">Shipping & Contact</legend>
@@ -157,9 +165,9 @@
                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="pk_test_OFTA5a7DOFLTHLhwrNT6YKyt"
                 data-amount="2000"
-                data-name="Demo Site"
-                data-description="2 widgets ($20.00)"
-                data-image="/128x128.png">
+                data-name="WKND Pants"
+                data-description="Sweatpants"
+                data-image="images/wkndpantslogo.png">
               </script>
             </form>
           </div>
@@ -179,7 +187,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/order_form.js"></script>
-
+    <script src="js/cart.js"></script>
   </body>
 </html>

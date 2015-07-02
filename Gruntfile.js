@@ -104,7 +104,7 @@ module.exports = function(grunt) {
       },
       //linting server side tests
       mocha: {
-        src: ['backend/test/tours_routes_test.js'],
+        src: ['backend/test/pants_routes_test.js'],
         options: {
           globals: {
             describe: true,
@@ -184,7 +184,7 @@ module.exports = function(grunt) {
       test: {
         options: {
         },
-        src:['backend/test/tours_routes_test.js']
+        src:['backend/test/pants_routes_test.js']
       }
     }
   });
