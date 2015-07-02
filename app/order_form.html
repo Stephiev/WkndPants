@@ -59,31 +59,31 @@
           <h4 class="description_orderpage">Shipping Address</h4>
           <li>
             <label for="shipping_firstname" class="label_orderpage">First Name:</label>&#42;
-            <input id="shipping_firstname" name="shipping_firstname" placeholder="First Name" type="text" class="stored input_orderpage" required>
+            <input id="shipping_firstname" name="shippingname" placeholder="First Name" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="shipping_lastname" class="label_orderpage">Last Name:</label>&#42;
-            <input id="shipping_lastname" name="shipping_lastname" placeholder="Last Name" type="text" class="stored input_orderpage" required>
+            <input id="shipping_lastname" name="shippinglastname" placeholder="Last Name" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="shipping_street1" class="label_orderpage">Street Address 1:</label>&#42;
-            <input id="shipping_street1" name="shipping_street1" placeholder="Street Address 1" type="text" class="stored input_orderpage" required>
+            <input id="shipping_street1" name="shippingstreetone" placeholder="Street Address 1" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="shipping_street2" class="label_orderpage">Street Address 2: </label>
-            <input id="shipping_street2" name="shipping_street2" placeholder="Street Address 2" type="text" class="stored input_orderpage">
+            <input id="shipping_street2" name="shippingstreettwo" placeholder="Street Address 2" type="text" class="stored input_orderpage">
           </li>
           <li>
             <label for="shipping_city" class="label_orderpage">City:</label>&#42;
-            <input id="shipping_city" name="shipping_city" placeholder="City" type="text" class="stored input_orderpage" required>
+            <input id="shipping_city" name="shippingcity" placeholder="City" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="shipping_state" class="label_orderpage">State:</label>&#42;
-            <input id="shipping_state" name="shipping_state" placeholder="State" type="text" class="stored input_orderpage" required>
+            <input id="shipping_state" name="shippingstate" placeholder="State" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="shipping_zip" class="label_orderpage">Zip Code:</label>&#42;
-            <input id="shipping_zip" name="shipping_zip" placeholder="Zip/Postal"type="text" class="stored input_orderpage" required>
+            <input id="shipping_zip" name="shippingzip" placeholder="Zip/Postal"type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="phone" class="label_orderpage">Phone:</label>&#42;
@@ -105,32 +105,35 @@
         <legend class="legend_cart-form">Billing</legend>
         <ul>
           <h4 class="description_orderpage">Billing Address</h4>
+          <!--<input type="checkbox" id="billingshippingcheckbox" name="billingshippingcheckbox1" value="yes" onclick="addToBilling(this.form)">-->
+          <input type="checkbox" name="addtobilling" onclick="FillBilling(this.form)">
+          <label>Billing Address Is The Same As Shipping Address</label>
           <li>
             <label for="billing_firstname" class="label_orderpage">First Name:</label>&#42;
-            <input id="billing_firstname" name="billing_firstname" placeholder="First Name" type="text" class="stored input_orderpage" required>
+            <input id="billing_firstname" name="billingname" placeholder="First Name" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="billing_lastname" class="label_orderpage">Last Name:</label>&#42;
-            <input id="billing_lastname" name="billing_lastname" placeholder="Last Name" type="text" class="stored input_orderpage" required>
+            <input id="billing_lastname" name="billinglastname" placeholder="Last Name" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="billing_street1" class="label_orderpage">Street Address 1:</label>&#42;
-            <input id="billing_street1" name="billing_street1" placeholder="Street Address 1" type="text" class="stored input_orderpage" required>
+            <input id="billing_street1" name="billingstreetone" placeholder="Street Address 1" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="billing_street2" class="label_orderpage">Street Address 2:</label>
-            <input id="billing_street2" name="billing_street2" placeholder="Street Address 2" type="text" class="stored input_orderpage" ></li>
+            <input id="billing_street2" name="billingstreettwo" placeholder="Street Address 2" type="text" class="stored input_orderpage" ></li>
           <li>
             <label for="billing_city" class="label_orderpage">City:</label>&#42;
-            <input id="billing_city" name="billing_city" placeholder="City" type="text" class="stored input_orderpage" required>
+            <input id="billing_city" name="billingcity" placeholder="City" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="billing_state" class="label_orderpage">State:</label>&#42;
-            <input id="billing_state" name="billing_state" placeholder="State" type="text" class="stored input_orderpage" required>
+            <input id="billing_state" name="billingstate" placeholder="State" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="billing_zip" class="label_orderpage">Zip Code:</label>&#42;
-            <input id="billing_zip" name="billing_zip" placeholder="Zip/Postal"type="text" class="stored input_orderpage" required>
+            <input id="billing_zip" name="billingzip" placeholder="Zip/Postal"type="text" class="stored input_orderpage" required>
           </li>
         </ul>
       </fieldset>
@@ -140,7 +143,7 @@
         <legend class="legend_cart-form">Card Information</legend>
         <ul>
           <h4 class="description_orderpage">Secure Payment</h4>
-          <li>
+          <!-- <li>
             <label for="cardnumber" class="label_orderpage">Card number: </label>
             <input id="cardnumber" class="input_orderpage" name="cardnumber" placeholder="4242424242424242" type="text" required>
           </li>
@@ -155,20 +158,13 @@
           <li>
             <label for="secure" class="label_orderpage">Security code: </label>
             <input id="secure" class="input_orderpage" name="secure" placeholder="XXX" type="text" required>
-          </li>
-           <div>
+          </li> -->
             <form action="/api/charge" method="POST">
-              <script
-                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="pk_test_OFTA5a7DOFLTHLhwrNT6YKyt"
-                data-amount="3200"
-                data-name="WKND Pants"
-                data-description="Sweatpants"
-                data-image="images/wkndpantslogo.png">
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button">
               </script>
-            </form>
-          </div>
-          <input type="submit" class="submit_button input_orderpage" name="mysubmit" value="SUBMIT ORDER" />
+
+            <input type="submit" id="test_submit" class="submit_button input_orderpage" name="mysubmit" value="SUBMIT ORDER" />
+          </form>
         </ul>
       </fieldset>
     </form>
@@ -185,6 +181,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>
-
   </body>
 </html>

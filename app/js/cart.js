@@ -1,3 +1,5 @@
+var postTotal;
+
 $(document).ready(function(){
 
   carting(shoppingCart, "Small")
@@ -22,8 +24,8 @@ $(document).ready(function(){
     setTotal = 32 * totalCount;
     $('#subtotal').text(setTotal);
     $('.stripe-button').attr('data-amount', setTotal);
+    postTotal = setTotal * 100;
     var setTest = $('.stripe-button').attr('data-amount');
-    console.log(setTest);
     if (setTotal == 0) {
       cartStored = false;
       $('.cart_heading').after('<li class="cart_empty">Your cart is empty<li>');
@@ -48,6 +50,62 @@ $(document).ready(function(){
     shoppingCart[changeItem].sizes[changeSize.toLowerCase()] = $(this).val();
     storeCart();
     subTotal();
+  });
+});
+
+
+// Javascript Code - - This will fill in the Billing Information if the Shipping and Billing are the same: Then it will remove the information if they unclick the button
+
+function FillBilling(f) {
+  if(f.addtobilling.checked == true) {
+    f.billingname.value = f.shippingname.value;
+    f.billinglastname.value = f.shippinglastname.value;
+    f.billingstreetone.value = f.shippingstreetone.value;
+    f.billingstreettwo.value = f.shippingstreettwo.value;
+    f.billingcity.value = f.shippingcity.value;
+    f.billingstate.value = f.shippingstate.value;
+    f.billingzip.value = f.shippingzip.value;
+  }
+  else if(f.addtobilling.checked == false) {
+    f.billingname.value = "";
+    f.billinglastname.value = "";
+    f.billingstreetone.value = "";
+    f.billingstreettwo.value = "";
+    f.billingcity.value = "";
+    f.billingstate.value = "";
+    f.billingzip.value = "";
+  }
+}
+
+//testing post function for cart
+var handler = StripeCheckout.configure({
+    key: 'pk_test_OFTA5a7DOFLTHLhwrNT6YKyt',
+    token: function(token) {
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+    }
+  });
+
+$('#test_submit').on('click', function(e){
+  $.ajax({
+    type        :   'POST',
+    url         :   '/api/pants/checkout_inventory',
+    data        :   { "altered": shoppingCart, "total": postTotal},
+    dataType    :   "json",
+    success     :   function successful(data) {
+      console.log("Request was successful");
+      console.log(data)
+    }
+  });
+  handler.open({
+    name: 'WKND Pants',
+    description: 'pants',
+    amount: postTotal
+  });
+  e.preventDefault();
+
+  $(window).on('popstate', function() {
+    handler.close();
   });
 });
 

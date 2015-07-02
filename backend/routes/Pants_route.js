@@ -34,8 +34,9 @@ module.exports = function(router) {
   });
 
 // Use when submitting a cart and after making payment
-router.patch("/pants/checkout_inventory", function(req, res) {
-
+router.post("/pants/checkout_inventory", function(req, res) {
+    console.log('made a post request');
+    console.log(req.body)
     var style;
     var small;
     var medium;
@@ -120,6 +121,5 @@ router.patch("/pants/checkout_inventory", function(req, res) {
         console.log("Card declined");
       }
     });
-
   });
 };
