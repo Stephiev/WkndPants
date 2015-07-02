@@ -8,6 +8,10 @@ header {
 .logo_text {
   padding-top: .5em;
 }
+.wknd_logo {
+  width: 5em;
+  float: right;
+}
 h1 {
   text-align: center;
 }

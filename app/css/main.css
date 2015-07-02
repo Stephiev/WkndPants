@@ -57,10 +57,7 @@ html {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-audio,
-canvas,
-progress,
-video {
+audio, canvas, progress, video {
   display: inline-block; /* 1 */
   vertical-align: baseline; /* 2 */
 }
@@ -84,8 +81,7 @@ a {
  * Improve readability of focused elements when they are also in an
  * active/hover state.
  */
-a:active,
-a:hover {
+a:active, a:hover {
   outline: 0;
 }
 /* Text-level semantics == */
@@ -98,8 +94,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-b,
-strong {
+b, strong {
   font-weight: bold;
 }
 /**
@@ -124,8 +119,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -167,10 +161,7 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-code,
-kbd,
-pre,
-samp {
+code, kbd, pre, samp {
   font-family: monospace, monospace;
   font-size: 1em;
 }
@@ -185,11 +176,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-button,
-input,
-optgroup,
-select,
-textarea {
+button, input, optgroup, select, textarea {
   color: inherit; /* 1 */
   font: inherit; /* 2 */
   margin: 0; /* 3 */
@@ -206,8 +193,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-button,
-select {
+button, select {
   text-transform: none;
 }
 /**
@@ -227,15 +213,13 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled],
-html input[disabled] {
+button[disabled], html input[disabled] {
   cursor: default;
 }
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -253,8 +237,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -323,11 +306,14 @@ h1{
 h2, h3 {
   font-weight: 700;
 }
+input, select, button, label {
+  cursor: pointer;
+}
 .tagline {
   font-size: 1.25em;
   text-transform: uppercase;
 }
-/*icon fonts*/
+/*fonts*/
 @font-face {
   font-family: 'icomoon';
   src:url('../fonts/icomoon.eot?rd077y');

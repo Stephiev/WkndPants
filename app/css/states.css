@@ -48,9 +48,12 @@
   }
   .pant_img {
     width: 20em;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 8em;
+            flex-grow: 1;
+    -webkit-flex-grow: 1;
+            flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+            flex-basis: 8em;
+    -webkit-flex-basis: 8em;
   }
   .pant_style_name {
     font-size: 1.25em;
@@ -100,8 +103,10 @@
             flex-wrap: wrap;
     -webkit-justify-content: center;
             justify-content: center;
-    align-content: flex-start;
-    align-items: flex-start;
+            align-content: flex-start;
+    -webkit-align-content: flex-start;
+            align-items: flex-start;
+    -webkit-align-items: flex-start;
   }
   .pant {
     width: 20em;
