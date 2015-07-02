@@ -1,21 +1,18 @@
 $(document).ready(function(){
-  if (JSON.parse(localStorage.getItem('cartStored')) == true) {
-    runLog();
 
-    carting(shoppingCart, "Small")
-    carting(shoppingCart, "Medium")
-    carting(shoppingCart, "Large")
+  carting(shoppingCart, "Small")
+  carting(shoppingCart, "Medium")
+  carting(shoppingCart, "Large")
 
-    function carting(shoppingCart, sizeRequested) {
-      for (var i = 0; i < 4; i++) {
-        if (shoppingCart[i].sizes[sizeRequested.toLowerCase()] > 0) {
-          $('.cart_heading').after('<li id="' + sizeRequested + i + '">'+ shoppingCart[i].style + ', ' + 'Size: <span class="this_size">' + sizeRequested + '</span>,' + ' ' + 'Price: $32,' + ' qty:' + '<input type="number" class="cart_qty_input" min="1" max="10" value="' + shoppingCart[i].sizes[sizeRequested.toLowerCase()] + '"></input><button type="button" name="' + sizeRequested + '" class="delete" value="' + i + '">X</button><li>');
-        }
+  function carting(shoppingCart, sizeRequested) {
+    for (var i = 0; i < 4; i++) {
+      if (shoppingCart[i].sizes[sizeRequested.toLowerCase()] > 0) {
+        $('.cart_heading').after('<li class="cart_item" id="' + sizeRequested + i + '"><span class="cart_item_desc">'+ shoppingCart[i].style + '</span><span class="cart_item_size">Size: ' + sizeRequested + '</span><span class="cart_item_price">Price: $32</span><span class="cart_item_inputs">Qty:<input type="number" class="cart_qty_input" min="1" max="10" value="' + shoppingCart[i].sizes[sizeRequested.toLowerCase()] + '"></input><button type="button" name="' + sizeRequested + '" class="delete" value="' + i + '">X</button></span><li>');
       }
     }
-  } else {
-    $('.cart_heading').after('<li>Your cart is empty<li>')
   }
+  runLog();
+
   var setTotal;
   var subTotal = function() {
     var totalCount = 0;
