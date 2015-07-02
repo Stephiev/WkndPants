@@ -21,6 +21,9 @@ $(document).ready(function(){
     });
     setTotal = 32 * totalCount;
     $('#subtotal').text(setTotal);
+    $('.stripe-button').attr('data-amount', setTotal);
+    var setTest = $('.stripe-button').attr('data-amount');
+    console.log(setTest);
     if (setTotal == 0) {
       cartStored = false;
       $('.cart_heading').after('<li class="cart_empty">Your cart is empty<li>');
