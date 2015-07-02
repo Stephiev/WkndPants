@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Weekend Pants Unlimited</title>
+    <title>WKND Pants | Cart</title>
     <meta property="og:site_name" content="Weekend Pants Unlimited"/>
     <meta property="og:description" content="The Weekend is Calling"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,6 +38,14 @@
         </ol>
       </nav>
     </header>
+    <section class="shopping_cart">
+      <ul>
+        <li class="cart_heading">
+          <h2 class="cart_heading_h2">Shopping Cart</h2>
+        </li>
+        <li class="cart_subtotal">Subtotal: $<span id="subtotal"></span></li>
+      </ul>
+    </section>
     <form class="order_form">
       <fieldset class="fieldset_orderpage">
         <legend class="legend_cart-form">Shipping & Contact</legend>
@@ -51,31 +59,31 @@
           <h4 class="description_orderpage">Shipping Address</h4>
           <li>
             <label for="shipping_firstname" class="label_orderpage">First Name:</label>&#42;
-            <input id="shipping_firstname" name="shipping_firstname" placeholder="First Name" type="text" class="stored input_orderpage" required>
+            <input id="shipping_firstname" name="shippingname" placeholder="First Name" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="shipping_lastname" class="label_orderpage">Last Name:</label>&#42;
-            <input id="shipping_lastname" name="shipping_lastname" placeholder="Last Name" type="text" class="stored input_orderpage" required>
+            <input id="shipping_lastname" name="shippinglastname" placeholder="Last Name" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="shipping_street1" class="label_orderpage">Street Address 1:</label>&#42;
-            <input id="shipping_street1" name="shipping_street1" placeholder="Street Address 1" type="text" class="stored input_orderpage" required>
+            <input id="shipping_street1" name="shippingstreetone" placeholder="Street Address 1" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="shipping_street2" class="label_orderpage">Street Address 2: </label>
-            <input id="shipping_street2" name="shipping_street2" placeholder="Street Address 2" type="text" class="stored input_orderpage">
+            <input id="shipping_street2" name="shippingstreettwo" placeholder="Street Address 2" type="text" class="stored input_orderpage">
           </li>
           <li>
             <label for="shipping_city" class="label_orderpage">City:</label>&#42;
-            <input id="shipping_city" name="shipping_city" placeholder="City" type="text" class="stored input_orderpage" required>
+            <input id="shipping_city" name="shippingcity" placeholder="City" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="shipping_state" class="label_orderpage">State:</label>&#42;
-            <input id="shipping_state" name="shipping_state" placeholder="State" type="text" class="stored input_orderpage" required>
+            <input id="shipping_state" name="shippingstate" placeholder="State" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="shipping_zip" class="label_orderpage">Zip Code:</label>&#42;
-            <input id="shipping_zip" name="shipping_zip" placeholder="Zip/Postal"type="text" class="stored input_orderpage" required>
+            <input id="shipping_zip" name="shippingzip" placeholder="Zip/Postal"type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="phone" class="label_orderpage">Phone:</label>&#42;
@@ -89,7 +97,7 @@
           <h4 class="description_orderpage">Choose a Delivery Option</h4>
           <li>
             <input class="shipping_standard" name="shipping_standard" type="radio" checked required>
-            <label for="shipping_standard" class="label_orderpage">Shipping - $7.95</label>
+            <label for="shipping_standard" class="label_orderpage">Ground Shipping - $7.95</label>
           </li>
         </ul>
       </fieldset>
@@ -97,32 +105,35 @@
         <legend class="legend_cart-form">Billing</legend>
         <ul>
           <h4 class="description_orderpage">Billing Address</h4>
+          <!--<input type="checkbox" id="billingshippingcheckbox" name="billingshippingcheckbox1" value="yes" onclick="addToBilling(this.form)">-->
+          <input type="checkbox" name="addtobilling" onclick="FillBilling(this.form)">
+          <label>Billing Address Is The Same As Shipping Address</label>
           <li>
             <label for="billing_firstname" class="label_orderpage">First Name:</label>&#42;
-              <input id="billing_firstname" name="billing_firstname" placeholder="First Name" type="text" class="stored input_orderpage" required>
-            </li>
+            <input id="billing_firstname" name="billingname" placeholder="First Name" type="text" class="stored input_orderpage" required>
+          </li>
           <li>
             <label for="billing_lastname" class="label_orderpage">Last Name:</label>&#42;
-            <input id="billing_lastname" name="billing_lastname" placeholder="Last Name" type="text" class="stored input_orderpage" required>
+            <input id="billing_lastname" name="billinglastname" placeholder="Last Name" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="billing_street1" class="label_orderpage">Street Address 1:</label>&#42;
-            <input id="billing_street1" name="billing_street1" placeholder="Street Address 1" type="text" class="stored input_orderpage" required>
+            <input id="billing_street1" name="billingstreetone" placeholder="Street Address 1" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="billing_street2" class="label_orderpage">Street Address 2:</label>
-            <input id="billing_street2" name="billing_street2" placeholder="Street Address 2" type="text" class="stored input_orderpage" ></li>
+            <input id="billing_street2" name="billingstreettwo" placeholder="Street Address 2" type="text" class="stored input_orderpage" ></li>
           <li>
             <label for="billing_city" class="label_orderpage">City:</label>&#42;
-            <input id="billing_city" name="billing_city" placeholder="City" type="text" class="stored input_orderpage" required>
+            <input id="billing_city" name="billingcity" placeholder="City" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="billing_state" class="label_orderpage">State:</label>&#42;
-            <input id="billing_state" name="billing_state" placeholder="State" type="text" class="stored input_orderpage" required>
+            <input id="billing_state" name="billingstate" placeholder="State" type="text" class="stored input_orderpage" required>
           </li>
           <li>
             <label for="billing_zip" class="label_orderpage">Zip Code:</label>&#42;
-            <input id="billing_zip" name="billing_zip" placeholder="Zip/Postal"type="text" class="stored input_orderpage" required>
+            <input id="billing_zip" name="billingzip" placeholder="Zip/Postal"type="text" class="stored input_orderpage" required>
           </li>
         </ul>
       </fieldset>
@@ -158,8 +169,8 @@
                 data-description="Sweatpants"
                 data-image="images/wkndpantslogo.png">
               </script>
-          </form>
-        </div>
+            </form>
+          </div>
           <input type="submit" class="submit_button input_orderpage" name="mysubmit" value="SUBMIT ORDER" />
         </ul>
       </fieldset>
@@ -176,6 +187,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/cart.js"></script>
   </body>
 </html>
