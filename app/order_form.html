@@ -143,7 +143,7 @@
         <legend class="legend_cart-form">Card Information</legend>
         <ul>
           <h4 class="description_orderpage">Secure Payment</h4>
-          <li>
+          <!-- <li>
             <label for="cardnumber" class="label_orderpage">Card number: </label>
             <input id="cardnumber" class="input_orderpage" name="cardnumber" placeholder="4242424242424242" type="text" required>
           </li>
@@ -158,20 +158,13 @@
           <li>
             <label for="secure" class="label_orderpage">Security code: </label>
             <input id="secure" class="input_orderpage" name="secure" placeholder="XXX" type="text" required>
-          </li>
-           <div>
+          </li> -->
             <form action="/api/charge" method="POST">
-              <script
-                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="pk_test_OFTA5a7DOFLTHLhwrNT6YKyt"
-                data-amount="2000"
-                data-name="WKND Pants"
-                data-description="Sweatpants"
-                data-image="images/wkndpantslogo.png">
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button">
               </script>
-            </form>
-          </div>
-          <input type="submit" class="submit_button input_orderpage" name="mysubmit" value="SUBMIT ORDER" />
+
+            <input type="submit" id="test_submit" class="submit_button input_orderpage" name="mysubmit" value="SUBMIT ORDER" />
+          </form>
         </ul>
       </fieldset>
     </form>
