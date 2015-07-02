@@ -1,3 +1,5 @@
+var postTotal;
+
 $(document).ready(function(){
 
   carting(shoppingCart, "Small")
@@ -21,6 +23,9 @@ $(document).ready(function(){
     });
     setTotal = 32 * totalCount;
     $('#subtotal').text(setTotal);
+    $('.stripe-button').attr('data-amount', setTotal);
+    postTotal = setTotal * 100;
+    var setTest = $('.stripe-button').attr('data-amount');
     if (setTotal == 0) {
       cartStored = false;
       $('.cart_heading').after('<li class="cart_empty">Your cart is empty<li>');
@@ -71,4 +76,36 @@ function FillBilling(f) {
     f.billingzip.value = "";
   }
 }
+
+//testing post function for cart
+var handler = StripeCheckout.configure({
+    key: 'pk_test_OFTA5a7DOFLTHLhwrNT6YKyt',
+    token: function(token) {
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+    }
+  });
+
+$('#test_submit').on('click', function(e){
+  $.ajax({
+    type        :   'POST',
+    url         :   '/api/pants/checkout_inventory',
+    data        :   { "altered": shoppingCart, "total": postTotal},
+    dataType    :   "json",
+    success     :   function successful(data) {
+      console.log("Request was successful");
+      console.log(data)
+    }
+  });
+  handler.open({
+    name: 'WKND Pants',
+    description: 'pants',
+    amount: postTotal
+  });
+  e.preventDefault();
+
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+});
 
