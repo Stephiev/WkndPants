@@ -88,7 +88,7 @@ $('#wknd_cmdr_cart').on('click', function(e){
   storeCart();
 });
 
-$('#log').on('click', function() {
+var runLog = function() {
   var basics = shoppingCart[0];
   var purple = shoppingCart[1];
   var wknd = shoppingCart[2];
@@ -97,6 +97,9 @@ $('#log').on('click', function() {
   console.log(basics.style + ", S:" + basics.sizes.small + ", M:" + basics.sizes.medium + ", L:" + basics.sizes.large);
   console.log(purple.style + ", S:" + purple.sizes.small + ", M:" + purple.sizes.medium + ", L:" + purple.sizes.large);
   console.log(wknd.style + ", S:" + wknd.sizes.small + ", M:" + wknd.sizes.medium + ", L:" + wknd.sizes.large);
+};
+$('#log').on('click', function() {
+  runLog();
 });
 
 var cartStored;

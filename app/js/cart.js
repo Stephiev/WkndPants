@@ -1,16 +1,51 @@
 $(document).ready(function(){
   if (JSON.parse(localStorage.getItem('cartStored')) == true) {
-    console.log(shoppingCart[0].style + ", " + shoppingCart[0].quantity);
-    console.log(shoppingCart[1].style + ", " + shoppingCart[1].quantity);
-    console.log(shoppingCart[2].style + ", " + shoppingCart[2].quantity);
-    console.log(shoppingCart[3].style + ", " + shoppingCart[3].quantity);
+    runLog();
 
-    if (shoppingCart[0].quantity[0] > 0) {
-      $('.cart_heading').after('<li>'+ shoppingCart[0].style + ' ' + 'Small' + ' ' + '$32' + ' ' + '<input type="number" class="cart_qty_input" value="' + shoppingCart[0].quantity[0] + '"></input><button class="delete">X</button><li>');
-};
+    carting(shoppingCart, "Small")
+    carting(shoppingCart, "Medium")
+    carting(shoppingCart, "Large")
+
+    function carting(shoppingCart, sizeRequested) {
+      for (var i = 0; i < 4; i++) {
+        if (shoppingCart[i].sizes[sizeRequested.toLowerCase()] > 0) {
+          $('.cart_heading').after('<li>'+ shoppingCart[i].style + ', ' + 'Size: <span class="this_size">' + sizeRequested + '</span>,' + ' ' + 'Price: $32,' + ' qty:' + '<input type="number" class="cart_qty_input" min="1" max="10" value="' + shoppingCart[i].sizes[sizeRequested.toLowerCase()] + '"></input><button class="delete" value="' + i + '">X</button><li>');
+        }
+      }
+    }
   } else {
     $('.cart_heading').after('<li>Your cart is empty<li>')
   }
-});
+  var setTotal;
+  var subTotal = function() {
+    var totalCount = 0;
+    $('.cart_qty_input').each(function() {
+      totalCount = parseInt($(this).val()) + parseInt(totalCount);
+    });
+    setTotal = 32 * totalCount;
+    $('#subtotal').text(setTotal);
+    if (setTotal == 0) {
+      cartStored = false;
+      $('.cart_heading').after('<li>Your cart is empty<li>');
+    }
+  };
+  subTotal();
 
+  $('.delete').on('click', function(){
+    var voidItem = $(this).val();
+    var voidSize = $(this).siblings('.this_size').text();
+    shoppingCart[voidItem].sizes[voidSize.toLowerCase()] = 0;
+    storeCart();
+    $(this).parent().detach();
+    subTotal();
+  })
+
+  $('.cart_qty_input').change(function(){
+    var changeItem = $(this).next().val();
+    var changeSize = $(this).siblings('.this_size').text();
+    shoppingCart[changeItem].sizes[changeSize.toLowerCase()] = $(this).val();
+    storeCart();
+    subTotal();
+  });
+});
 
