@@ -16,30 +16,41 @@ $(document).ready(function(){
   runLog();
 
   var setTotal;
-  // var salesTax = 0;
-  // $('#shipping_state').change(function(){
-  //   if ($(this).val() == 'WA') {
-  //     salesTax = (setTotal * 0.096).toFixed(2);
-  //     console.log(salesTax)
-  //   } else {
-  //     salesTax = 0;
-  //   }
-  // })
+
   var shippingCost = $('#shipping_cost').val();
+
+  $('#shipping_state').change(function(){
+    subTotal();
+  });
+
   var subTotal = function() {
     var totalCount = 0;
     $('.cart_qty_input').each(function() {
       totalCount = parseInt($(this).val()) + parseInt(totalCount);
     });
     setTotal = 32 * totalCount;
+
     $('#subtotal').text(setTotal);
-    // var currentTotal = (setTotal + salesTax + shippingCost);
-    // $('#total_cost').text(currentTotal);
-    postTotal = setTotal * 100;
-    // postTotal = currentTotal * 100;
+
+    var salesTax;
+    if ($('#shipping_state').val() == 'WA') {
+      salesTax = parseInt(setTotal * 9.6)/100;
+      } else {
+        salesTax = 0;
+      };
+    $('#sales_tax').text(salesTax);
+    console.log(salesTax);
+
+    var currentTotal = Math.round((setTotal + salesTax + (parseInt(shippingCost*100)/100))*100)/100;
+    $('#total_cost').text(currentTotal);
+
+    postTotal = Math.round(currentTotal * 100);
+    console.log(postTotal);
+
     if (setTotal == 0) {
       cartStored = false;
       $('.cart_heading').after('<li class="cart_empty">Your cart is empty<li>');
+      $('#total_cost').addClass('hidden');
     }
   };
   subTotal();

@@ -205,4 +205,13 @@ footer {
 .contact_fieldset {
   border: 5px solid #ededed;
 }
-
+.display_cost {
+  font-size: 1em;
+  margin: .5em 0;
+}
+.display_cost span {
+  font-weight: 400;
+}
+.hidden {
+  display: none;
+}

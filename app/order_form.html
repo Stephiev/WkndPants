@@ -19,7 +19,9 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <header>
-      <img class="wknd_logo" src="images/wkndpantslogo.png" />
+      <a href="index.html">
+        <img class="wknd_logo" src="images/wkndpantslogo.png" />
+      </a>
       <h1 class="logo_text">Weekend Pants Unlimited</h1>
       <nav>
         <ol>
@@ -211,7 +213,8 @@
             <label for="secure" class="label_orderpage">Security code: </label>
             <input id="secure" class="input_orderpage" name="secure" placeholder="XXX" type="text" required>
           </li> -->
-          <li>TOTAL: $<span id="total_cost"></span></li>
+          <li class="display_cost">Sales Tax: $<span id="sales_tax"></span> </li>
+          <li class="display_cost">TOTAL: $<span id="total_cost"></span></li>
           <li>
             <input type="submit" id="test_submit" class="submit_button input_orderpage" name="mysubmit" value="SUBMIT ORDER" />
           </li>
