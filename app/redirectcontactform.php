@@ -1,9 +1,10 @@
-<!doctype html>
-<html class="no-js" lang="EN">
-  <head>
+<?php
+
+?>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Weekend Pants Unlimited</title>
+    <title>WKND Pants | Cart</title>
     <meta property="og:site_name" content="Weekend Pants Unlimited"/>
     <meta property="og:description" content="The Weekend is Calling"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,9 +20,7 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <header>
-      <a href="index.html">
-        <img class="wknd_logo" src="images/wkndpantslogo.png" />
-      </a>
+      <img class="wknd_logo" src="images/wkndpantslogo.png" alt="Weekend Pants Logo" />
       <h1 class="logo_text">Weekend Pants Unlimited</h1>
       <nav>
         <ol>
@@ -35,21 +34,15 @@
             <a href="about.html">About</a>
           </li>
           <li class="nav_links">
-            <a href="order_form.html">Cart</a>
+            <a href="">Cart</a>
           </li>
         </ol>
       </nav>
     </header>
-    <main>
-      <section class="slider">
-        <figure>
-          <img src="images/Splash_1.jpg" alt="Picture Of People Wearing Pants">
-          <img src="images/Splash_2.jpg" alt="Picture Of People Wearing Pants">
-          <img src="images/Splash_3.jpg" alt="Picture Of People Wearing Pants">
-          <img src="images/Splash_1.jpg" alt="Picture Of People Wearing Pants">
-        </figure>
-      </section>
-    </main>
+    <section>
+      <p style="text-align: center; font-size: 1.2em; font-weight: 200; margin-top: 4em;">Thanks For Reaching Out!<br><br>We will get back to you as soon as possible!</p>
+      <h1 style="text-align: center; font-size: 4em; font-weight: 200; margin: 1em auto 2em auto;"><a href="pants.html">SHOP PANTS NOW</a></h1>
+    </section>
     <footer>
       <div class="footer_social_icons">
         <a href="https://twitter.com/">
@@ -60,9 +53,10 @@
       <p class="footer_text">Copyright &copy 2014 Weekend Pants Unlimited. All Rights Reserved.</p>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="js/jquery-2.1.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/cart.js"></script>
   </body>
-</html>
+<?php
+
+?>

@@ -116,3 +116,20 @@ $(document).ready(function(){
     };
 });
 
+/*function clearContactStorage() {
+  var contactButton = document.getElementById('submit_contact');
+  if(contactButton.clicked ==true) {
+console.log("It's true");
+localStorage.getItem('contactpageemail').clear();
+
+  }
+}
+var today = document.getElementById('submit_contact');
+today.addEventListener('submit', clearContactStorage, false);*/
+function clearData() {
+  localStorage.removeItem('contactpagefirstname');
+  localStorage.removeItem('contactpagelastname');
+  localStorage.removeItem('contactpageemail');
+  localStorage.removeItem('contactpagesubject');
+  localStorage.removeItem('contactpagemessage');
+}

@@ -1,6 +1,6 @@
 <?php
 
-if($_POST["submit"]) {
+if(isset($_POST["submit"])) {
 $to = "colbertlove12@gmail.com";
 $contactpagesubject = $_POST["contactpagesubject"];
 $contactfirstname = $_POST["contactpagefirstname"];
@@ -12,8 +12,7 @@ $contactpagemessage = 'First Name: '.$_POST["contactpagefirstname"]."\n"
 .'Message: '.$_POST["contactpagemessage"];
 $headers = 'From: Weekend-Pants-Contact';
 
-mail ($to, $contactpagesubject, $contactpagemessage, $headers);
-echo "Your message has been sent";
-
 }
+mail ($to, $contactpagesubject, $contactpagemessage, $headers);
+header('location: redirectcontactform.php');
 ?>
