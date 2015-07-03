@@ -16,19 +16,41 @@ $(document).ready(function(){
   runLog();
 
   var setTotal;
+
+  var shippingCost = $('#shipping_cost').val();
+
+  $('#shipping_state').change(function(){
+    subTotal();
+  });
+
   var subTotal = function() {
     var totalCount = 0;
     $('.cart_qty_input').each(function() {
       totalCount = parseInt($(this).val()) + parseInt(totalCount);
     });
     setTotal = 32 * totalCount;
+
     $('#subtotal').text(setTotal);
-    $('.stripe-button').attr('data-amount', setTotal);
-    postTotal = setTotal * 100;
-    var setTest = $('.stripe-button').attr('data-amount');
+
+    var salesTax;
+    if ($('#shipping_state').val() == 'WA') {
+      salesTax = parseInt(setTotal * 9.6)/100;
+      } else {
+        salesTax = 0;
+      };
+    $('#sales_tax').text(salesTax);
+    console.log(salesTax);
+
+    var currentTotal = Math.round((setTotal + salesTax + (parseInt(shippingCost*100)/100))*100)/100;
+    $('#total_cost').text(currentTotal);
+
+    postTotal = Math.round(currentTotal * 100);
+    console.log(postTotal);
+
     if (setTotal == 0) {
       cartStored = false;
       $('.cart_heading').after('<li class="cart_empty">Your cart is empty<li>');
+      $('#total_cost').addClass('hidden');
     }
   };
   subTotal();
