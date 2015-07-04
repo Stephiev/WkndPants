@@ -192,6 +192,9 @@ footer {
   z-index: 5;
   margin-top: -2.3em;
   height: 2.5em;
+  -webkit-appearance: none;
+  border-radius: 0;
+  background-color: #ededed;
 }
 .checkout_bottom {
   position: relative;

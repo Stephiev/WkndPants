@@ -73,16 +73,6 @@ $(document).ready(function(){
     storeCart();
     subTotal();
   });
-  //testing post function for cart
-// var handler = StripeCheckout.configure({
-//     key: 'pk_test_OFTA5a7DOFLTHLhwrNT6YKyt',
-//     token: function(token) {
-//       // Use the token to create the charge with a server-side script.
-//       // You can access the token ID with `token.id`
-//     }
-//   });
-
-
 });
 
 
@@ -120,5 +110,7 @@ $('#customButton').on('click', function(e){
       console.log(data)
     }
   });
+  localStorage.removeItem('shoppingCart');
+  cartStored = false;
 });
 

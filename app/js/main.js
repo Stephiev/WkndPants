@@ -15,6 +15,9 @@ $(document).ready(function(){
 $('.stored').change(function(){
   localStorage[$(this).attr('name')] = $(this).val();
 });
+$('.session_stored').change(function(){
+  sessionStorage[$(this).attr('name')] = $(this).val();
+});
 
 // pants.html
 var shoppingCart = [
