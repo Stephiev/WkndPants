@@ -179,7 +179,7 @@ footer {
 }
 .display_cost {
   font-size: 1em;
-  margin: 1em 0;
+  margin: 1em 0 2em 0;
 }
 .display_cost span {
   font-weight: 400;
@@ -188,8 +188,13 @@ footer {
   margin: 2em 0 0 0;
 }
 .submit_button {
-  margin-top: .5em;
+  position: absolute;
+  z-index: 5;
+  margin-top: -2.3em;
   height: 2.5em;
+}
+.checkout_bottom {
+  position: relative;
 }
 
 /*about page*/

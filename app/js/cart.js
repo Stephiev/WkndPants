@@ -38,11 +38,11 @@ $(document).ready(function(){
       } else {
         salesTax = 0;
       };
-    $('#sales_tax').text(salesTax);
+    $('#sales_tax').val(salesTax);
     console.log(salesTax);
 
     var currentTotal = Math.round((setTotal + salesTax + (parseInt(shippingCost*100)/100))*100)/100;
-    $('#total_cost').text(currentTotal);
+    $('#total_cost').val(currentTotal);
 
     postTotal = Math.round(currentTotal * 100);
     console.log(postTotal);
@@ -73,6 +73,16 @@ $(document).ready(function(){
     storeCart();
     subTotal();
   });
+  //testing post function for cart
+// var handler = StripeCheckout.configure({
+//     key: 'pk_test_OFTA5a7DOFLTHLhwrNT6YKyt',
+//     token: function(token) {
+//       // Use the token to create the charge with a server-side script.
+//       // You can access the token ID with `token.id`
+//     }
+//   });
+
+
 });
 
 
@@ -99,16 +109,7 @@ function FillBilling(f) {
   }
 }
 
-//testing post function for cart
-var handler = StripeCheckout.configure({
-    key: 'pk_test_OFTA5a7DOFLTHLhwrNT6YKyt',
-    token: function(token) {
-      // Use the token to create the charge with a server-side script.
-      // You can access the token ID with `token.id`
-    }
-  });
-
-$('#test_submit').on('click', function(e){
+$('#customButton').on('click', function(e){
   $.ajax({
     type        :   'POST',
     url         :   '/api/pants/checkout_inventory',
@@ -118,16 +119,6 @@ $('#test_submit').on('click', function(e){
       console.log("Request was successful");
       console.log(data)
     }
-  });
-  handler.open({
-    name: 'WKND Pants',
-    description: 'pants',
-    amount: postTotal
-  });
-  e.preventDefault();
-
-  $(window).on('popstate', function() {
-    handler.close();
   });
 });
 

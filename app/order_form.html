@@ -49,7 +49,7 @@
       </ul>
     </section>
     <section class="order_form">
-      <form action="/api/charge" method="POST">
+      <form action="../api/charge" method="POST">
         <fieldset class="fieldset_orderpage">
           <h4 class="heading_cart-form">Shipping & Contact</h4>
           <ul>
@@ -62,11 +62,11 @@
             <h4 class="description_orderpage">Shipping Address</h4>
             <li>
               <label for="shipping_firstname" class="label_orderpage">First Name:</label>&#42;
-              <input id="shipping_firstname" name="name" placeholder="First Name" type="text" class="stored input_orderpage" required>
+              <input id="shipping_firstname" name="first_name" placeholder="First Name" type="text" class="stored input_orderpage" required>
             </li>
             <li>
               <label for="shipping_lastname" class="label_orderpage">Last Name:</label>&#42;
-              <input id="shipping_lastname" name="name" placeholder="Last Name" type="text" class="stored input_orderpage" required>
+              <input id="shipping_lastname" name="last_name" placeholder="Last Name" type="text" class="stored input_orderpage" required>
             </li>
             <li>
               <label for="shipping_street1" class="label_orderpage">Street Address 1:</label>&#42;
@@ -146,7 +146,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="fieldset_orderpage">
+        <fieldset class="fieldset_orderpage checkout_bottom">
           <ul>
             <h4 class="description_orderpage">Shipping</h4>
             <li>
@@ -154,70 +154,18 @@
               <label for="shipping_standard" class="label_orderpage">Ground Shipping - $7.95</label>
             </li>
           </ul>
-        <!-- </fieldset> -->
-        <!-- <fieldset class="fieldset_orderpage">
-          <legend class="legend_cart-form">Billing</legend>
-          <ul>
-            <h4 class="description_orderpage">Billing Address</h4>
-            <!<input type="checkbox" id="billingshippingcheckbox" name="billingshippingcheckbox1" value="yes" onclick="addToBilling(this.form)">-->
-            <!-- <input type="checkbox" name="addtobilling" onclick="FillBilling(this.form)">
-            <label>Billing Address Is The Same As Shipping Address</label>
-            <li>
-              <label for="billing_firstname" class="label_orderpage">First Name:</label>&#42;
-              <input id="billing_firstname" name="billingname" placeholder="First Name" type="text" class="stored input_orderpage" required>
-            </li>
-            <li>
-              <label for="billing_lastname" class="label_orderpage">Last Name:</label>&#42;
-              <input id="billing_lastname" name="billinglastname" placeholder="Last Name" type="text" class="stored input_orderpage" required>
-            </li>
-            <li>
-              <label for="billing_street1" class="label_orderpage">Street Address 1:</label>&#42;
-              <input id="billing_street1" name="billingstreetone" placeholder="Street Address 1" type="text" class="stored input_orderpage" required>
-            </li>
-            <li>
-              <label for="billing_street2" class="label_orderpage">Street Address 2:</label>
-              <input id="billing_street2" name="billingstreettwo" placeholder="Street Address 2" type="text" class="stored input_orderpage" ></li>
-            <li>
-              <label for="billing_city" class="label_orderpage">City:</label>&#42;
-              <input id="billing_city" name="billingcity" placeholder="City" type="text" class="stored input_orderpage" required>
-            </li>
-            <li>
-              <label for="billing_state" class="label_orderpage">State:</label>&#42;
-              <input id="billing_state" name="billingstate" placeholder="State" type="text" class="stored input_orderpage" required>
-            </li>
-            <li>
-              <label for="billing_zip" class="label_orderpage">Zip Code:</label>&#42;
-              <input id="billing_zip" name="billingzip" placeholder="Zip/Postal"type="text" class="stored input_orderpage" required>
-            </li>
-          </ul>
-        </fieldset> -->
-            <!--
-    The hope is that we figure out how to use -->
-        <!-- <fieldset class="fieldset_orderpage"> -->
-          <!-- <legend class="legend_cart-form">Card Information</legend> -->
-          <!-- <ul> -->
-            <!-- <h4 class="description_orderpage">Secure Payment</h4> -->
-            <!-- <li>
-              <label for="cardnumber" class="label_orderpage">Card number: </label>
-              <input id="cardnumber" class="input_orderpage" name="cardnumber" placeholder="4242424242424242" type="text" required>
-            </li>
-            <li>
-              <label for="card_month_expiration" class="label_orderpage">Expiration Month: </label>
-              <input id="card_month_expiration" class="input_orderpage" name="card_month_expiration" placeholder="XX" type="text" required>
-            </li>
-            <li>
-              <label for="card_year_expiration" class="label_orderpage">Expiration Year: </label>
-              <input id="card_year_expiration" class="input_orderpage"  name="card_year_expiration" placeholder="XXXX" type="text" required>
-            </li>
-            <li>
-              <label for="secure" class="label_orderpage">Security code: </label>
-              <input id="secure" class="input_orderpage" name="secure" placeholder="XXX" type="text" required>
-            </li> -->
           <ul class="total_and_submit_orderpage">
-            <li class="display_cost">Sales Tax: $<span id="sales_tax"></span> </li>
-            <li class="display_cost">TOTAL: $<span id="total_cost"></span></li>
+            <li class="display_cost">Sales Tax: $<input id="sales_tax" name="sales_tax" readonly></input> </li>
+            <li class="display_cost">TOTAL: $<input id="total_cost" name="charge_total" readonly></input></li>
             <li>
-              <input type="submit" id="test_submit" class="submit_button input_orderpage" name="mysubmit" value="SUBMIT ORDER" />
+              <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+                data-name="WNDD"
+                data-description="2 widgets">console.log("ok");
+
+              </script>
+              <input type="submit" id="customButton" class="submit_button  input_orderpage" name="mysubmit" value="SUBMIT ORDER" />
             </li>
           </ul>
         </fieldset>
@@ -235,7 +183,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/jquery-2.1.4.js"></script>
-    <script src="https://checkout.stripe.com/checkout.js"></script>
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>
   </body>
