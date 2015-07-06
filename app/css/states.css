@@ -1,6 +1,6 @@
 /*media queries*/
   /*base styles for mobile*/
-@media (max-width: 37.5em)  {
+@media (max-width: 37.5em) {
   section {
     width: 95%;
     margin: auto, auto;

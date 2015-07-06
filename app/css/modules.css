@@ -177,15 +177,16 @@ footer {
 .select_orderpage {
   max-width: 20em;
 }
-.display_cost {
+.display_sales_tax {
   font-size: 1em;
-  margin: 1em 0 2em 0;
+  margin: 0 0 1em 0;
 }
-.display_cost span {
-  font-weight: 400;
+.display_final_total {
+  font-size: 1em;
+  margin: 0 0 2em 0;
 }
 .total_and_submit_orderpage {
-  margin: 2em 0 0 0;
+  margin: 1em 0 0 0;
 }
 .submit_button {
   position: absolute;
@@ -198,6 +199,9 @@ footer {
 }
 .checkout_bottom {
   position: relative;
+}
+.submit_button_statement {
+  margin: 1em 0 0 0;
 }
 
 /*about page*/

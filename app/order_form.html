@@ -155,19 +155,18 @@
             </li>
           </ul>
           <ul class="total_and_submit_orderpage">
-            <li class="display_cost">Sales Tax: $<input id="sales_tax" name="sales_tax" readonly></input> </li>
-            <li class="display_cost">TOTAL: $<input id="total_cost" name="charge_total" readonly></input></li>
+            <li class="display_sales_tax">Sales Tax: $<input id="sales_tax" name="sales_tax" readonly></input> </li>
+            <li class="display_final_total">TOTAL: $<input id="total_cost" name="charge_total" readonly></input></li>
             <li>
               <script
                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
                 data-name="WNDD"
                 data-description="2 widgets">console.log("ok");
-
               </script>
               <input type="submit" id="customButton" class="submit_button  input_orderpage" name="mysubmit" value="SUBMIT ORDER" />
             </li>
-            <li>Your order will be processed after your account is charged.</li>
+            <li class="submit_button_statement">Your order will be processed after your account is charged.</li>
           </ul>
         </fieldset>
       </form>
@@ -181,7 +180,6 @@
       <h3><strong>Seattle </strong> ♥ <strong> Detroit</strong></h3>
       <p class="footer_text">Copyright &copy 2014 Weekend Pants Unlimited. All Rights Reserved.</p>
     </footer>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/main.js"></script>
