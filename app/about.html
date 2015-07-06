@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/modules.css">
     <link rel="stylesheet" href="css/states.css">
+    <script src="js/modernizr.custom.78291.js"></script>
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -55,7 +56,7 @@
             <ul>
               <li class="contact_li">
                 <label for="first_name">First Name:</label>
-                <input id="first_name" role="textbox" aria-required="true" class="input_about stored" name="contactpagefirstname" type="text" placeholder="First" title="First Name"/>
+                <input id="first_name" role="textbox" aria-required="true" class="input_about stored" name="contactpagefirstname" type="text" placeholder="First" title="First Name" />
               </li>
               <li class="contact_li">
                 <label for="last_name">Last Name:</label>
@@ -63,16 +64,17 @@
               </li>
               <li class="contact_li">
                 <label for="contact_email">Email Address:</label>
-                <input id="contact_email" role="textbox" aria-required="true" class="input_about stored" type="email" name="contactpageemail" title="email address" placeholder="Email" required/>
+                <input id="contact_email" role="textbox" aria-required="true" class="input_about stored" type="email" name="contactpageemail" title="email address" placeholder="Email" required />
               </li>
               <li id="contact_li">
                 <label for="contact_subject">Subject:</label>
-                <textarea id="contact_subject" role="textbox" rows=1 cols=110 aria-required="true" type="textbox" name="contactpagesubject" class="input_about stored"placeholder="Subject" required></textarea>
+                <textarea id="contact_subject" role="textbox" rows=1 cols=110 aria-required="true" type="textbox" name="contactpagesubject" class="input_about stored" placeholder="Subject" required></textarea>
               </li>
               <li id="contact_li">
                 <label for="contact_message">Message:</label>
                 <textarea id="contact_message" role="textbox" rows=5 cols=110 aria-required="true" type="textbox" class="input_about stored" name="contactpagemessage" placeholder="Message" required></textarea>
               </li>
+            </ul>
             <input type="submit" name="submit" id="submit" value="Submit" onclick="clearData()"/>
           </fieldset>
         </form>
@@ -85,7 +87,7 @@
         </a>
       </div>
       <h3><strong>Seattle </strong> ♥ <strong> Detroit</strong></h3>
-      <p class="footer_text">Copyright &copy 2014 Weekend Pants Unlimited. All Rights Reserved.</p>
+      <p class="footer_text">Copyright &copy; 2014 Weekend Pants Unlimited. All Rights Reserved.</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/jquery-2.1.4.js"></script>

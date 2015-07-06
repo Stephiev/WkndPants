@@ -167,25 +167,37 @@ input, select, button, label {
 }
 @font-face {
  font-family: 'Montserrat';
- src: url('../fonts/montserrat/Montserrat-Bold.otf') format('truetype');
+ src: url('../fonts/montserrat/Montserrat-Bold.otf');
+ src: local('Montserrat Bold'),
+      url('../fonts/montserrat/Montserrat-Bold.otf') format('truetype'),
+      url('../fonts/montserrat/Montserrat-Bold.eot') format('embedded-opentype');
  font-weight: 700;
  font-style: normal;
 }
 @font-face {
  font-family: 'Montserrat';
- src: url('../fonts/montserrat/Montserrat-Regular.otf') format('truetype');
+ src: url('../fonts/montserrat/Montserrat-Regular.otf');
+ src: local('Montserrat Regular'),
+      url('../fonts/montserrat/Montserrat-Regular.otf') format('truetype'),
+      url('../fonts/montserrat/Montserrat-Regular.eot') format('embedded-opentype');
  font-weight: 400;
  font-style: normal;
 }
 @font-face {
  font-family: 'Montserrat';
- src: url('../fonts/montserrat/Montserrat-UltraLight.otf') format('truetype');
+ src: url('../fonts/montserrat/Montserrat-UltraLight.otf');
+ src: local('Montserrat UltraLight'),
+      url('../fonts/montserrat/Montserrat-UltraLight.otf') format('truetype'),
+      url('../fonts/montserrat/Montserrat-UltraLight.eot') format('embedded-opentype');
  font-weight: 300;
  font-style: normal;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('../fonts/montserrat/Montserrat-Light.otf') format('truetype');
+  src: url('../fonts/montserrat/Montserrat-Light.otf');
+  src: local('Montserrat Light'),
+      url('../fonts/montserrat/Montserrat-Light.otf') format('truetype'),
+      url('../fonts/montserrat/Montserrat-Light.eot') format('embedded-opentype');
   font-weight: 200;
   font-style: normal;
 }
