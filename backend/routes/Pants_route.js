@@ -1,3 +1,5 @@
+
+
 "use strict";
 
 var bodyparser = require("body-parser");
@@ -109,6 +111,9 @@ router.post("/pants/checkout_inventory", function(req, res) {
     // See your keys here https://dashboard.stripe.com/account/apikeys
 
     var stripeToken = req.body.stripeToken;
+    // console.log(req.body);
+    console.log(req.body.charge_total)
+    console.log("in /charge route after form submit")
 
     var charge = stripe.charges.create({
       amount: 3200, // amount in cents, again this will be altered according to cart

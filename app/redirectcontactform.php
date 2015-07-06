@@ -34,7 +34,7 @@
             <a href="about.html">About</a>
           </li>
           <li class="nav_links">
-            <a href="">Cart</a>
+            <a href="order_form.html">Cart</a>
           </li>
         </ol>
       </nav>

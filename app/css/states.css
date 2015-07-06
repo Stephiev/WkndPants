@@ -1,9 +1,9 @@
 /*media queries*/
   /*base styles for mobile*/
-@media (max-width: 37.5em)  {
+@media (max-width: 37.5em) {
   section {
     width: 95%;
-    margin: auto, 1em;
+    margin: auto, auto;
   }
   .wknd_logo, .sidebar_img {
     display: none;
@@ -59,6 +59,14 @@
   .pant_style_name {
     font-size: 1.25em;
     margin: 0 0 .5em 0;
+  }
+  input {
+    padding-right: 0;
+    max-width: 19em;
+  }
+  fieldset {
+    width: 100%;
+    margin: 0;
   }
 }
 /* styles for screens larger than 600px */
