@@ -15,6 +15,9 @@ $(document).ready(function(){
 $('.stored').change(function(){
   localStorage[$(this).attr('name')] = $(this).val();
 });
+$('.session_stored').change(function(){
+  sessionStorage[$(this).attr('name')] = $(this).val();
+});
 
 // pants.html
 var shoppingCart = [
@@ -98,9 +101,6 @@ var runLog = function() {
   console.log(purple.style + ", S:" + purple.sizes.small + ", M:" + purple.sizes.medium + ", L:" + purple.sizes.large);
   console.log(wknd.style + ", S:" + wknd.sizes.small + ", M:" + wknd.sizes.medium + ", L:" + wknd.sizes.large);
 };
-$('#log').on('click', function() {
-  runLog();
-});
 
 var cartStored;
 var storeCart = function() {

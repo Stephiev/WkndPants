@@ -38,11 +38,11 @@ $(document).ready(function(){
       } else {
         salesTax = 0;
       };
-    $('#sales_tax').text(salesTax);
+    $('#sales_tax').val(salesTax);
     console.log(salesTax);
 
     var currentTotal = Math.round((setTotal + salesTax + (parseInt(shippingCost*100)/100))*100)/100;
-    $('#total_cost').text(currentTotal);
+    $('#total_cost').val(currentTotal);
 
     postTotal = Math.round(currentTotal * 100);
     console.log(postTotal);
@@ -75,40 +75,7 @@ $(document).ready(function(){
   });
 });
 
-
-// Javascript Code - - This will fill in the Billing Information if the Shipping and Billing are the same: Then it will remove the information if they unclick the button
-
-function FillBilling(f) {
-  if(f.addtobilling.checked == true) {
-    f.billingname.value = f.shippingname.value;
-    f.billinglastname.value = f.shippinglastname.value;
-    f.billingstreetone.value = f.shippingstreetone.value;
-    f.billingstreettwo.value = f.shippingstreettwo.value;
-    f.billingcity.value = f.shippingcity.value;
-    f.billingstate.value = f.shippingstate.value;
-    f.billingzip.value = f.shippingzip.value;
-  }
-  else if(f.addtobilling.checked == false) {
-    f.billingname.value = "";
-    f.billinglastname.value = "";
-    f.billingstreetone.value = "";
-    f.billingstreettwo.value = "";
-    f.billingcity.value = "";
-    f.billingstate.value = "";
-    f.billingzip.value = "";
-  }
-}
-
-//testing post function for cart
-var handler = StripeCheckout.configure({
-    key: 'pk_test_OFTA5a7DOFLTHLhwrNT6YKyt',
-    token: function(token) {
-      // Use the token to create the charge with a server-side script.
-      // You can access the token ID with `token.id`
-    }
-  });
-
-$('#test_submit').on('click', function(e){
+$('#customButton').on('click', function(e){
   $.ajax({
     type        :   'POST',
     url         :   '/api/pants/checkout_inventory',
@@ -119,15 +86,7 @@ $('#test_submit').on('click', function(e){
       console.log(data)
     }
   });
-  handler.open({
-    name: 'WKND Pants',
-    description: 'pants',
-    amount: postTotal
-  });
-  e.preventDefault();
-
-  $(window).on('popstate', function() {
-    handler.close();
-  });
+  localStorage.removeItem('shoppingCart');
+  localStorage.removeItem('cartStored');
 });
 
